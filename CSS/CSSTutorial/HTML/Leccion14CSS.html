@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lección 14; Pseudoclases</title>
+
+<head>
+
+<style type="text/css">
+
+	a:link {
+		text-decoration: none;
+		background-color: olive;
+		color:white;
+		font-weight: bold;
+		padding: 5px;
+		border-bottom: 3px solid black;
+		border-top: 3px solid black;
+	}
+	
+	a:hover{
+		background-color: white;
+		color: black;
+	}
+	
+	a:active {background-color: green;}
+	
+	a:visited {
+		background-color: black;
+		color: white;
+	}
+
+	p.clase1:first-letter {
+		font: 150% Verdana;
+		color: red;
+	}
+							
+	h2 span:first-child {color:red;}
+	
+	p.clase2:first-child {background-color: red;}
+	p.clase2:last-child {background-color: blue;}
+	p.clase2:nth-child(odd) {
+		letter-spacing:15px; 
+		color: yellow;
+	} 
+
+</style>
+
+</head>
+<body>
+
+<H2>Pseudoclases</H2>
+
+<p>Las Pseudoclases son Clases Especiales para algunos estados especiales
+	<br>Las Pseudoclases se definen añadiendo dos puntos antes de la pseudoclase concreta
+	<br>La sintaxis es la siguiente; etiqueta:pseudoclase{propiedad}
+	<br>Las más usadas son las que se usan con &lt;a&gt;
+	<br>Es importante saber que el orden en que se definen la pseudoclases es fundamental
+	<br>Orden: <strong>link-visited-hover-active</strong>
+	<br>Veamos las más importantes:
+</p>
+<dl>
+	<dt>:link</dt>
+		<dd>Enlace sin visitar</dd>
+	<dt>:visited</dt>
+		<dd>Enlace visitado</dd>
+	<dt>:hover</dt>
+		<dd>Enlace con el mouse sobre él</dd>
+	<dt>:active</dt>
+		<dd>Es la que tiene el foco en ese momento</dd>
+	<dt>:first-letter</dt>
+		<dd>Primera letra del texto</dd>
+	<dt>:first-line</dt>
+		<dd>Primera línea de texto</dd>
+	<dt>:first-child :last-child</dt>
+		<dd>Hace referencia al primer/último elemento de un tipo contenido dentro de otro.
+			<br>Es necesario que el tipo del primer/último elemento sea el indicado en la hoja de estilo
+			<br>Es decir, debe ser el primer/último hijo para que se aplique la propiedad.
+		</dd>
+	<dt>:nth-child(number)</dt>
+		<dd>Represente el elemento cuya posición sea = number
+			<br>:nth-child(3) Representa el tercer hijo</dd>
+	<dt>:nth-child(odd)</dt>
+		<dd>Representa elementos cuya posición numérica es impar; 1, 3, 5, etc</dd>
+	<dt>:nth-child(even)</dt>
+		<dd>Representa elementos cuya posición numérica es par: 2, 4, 6, etc</dd>
+	<dt>:nth-child(An+B)</dt>
+		<dd>Representa elementos cuya posición nunérica coincide con el 
+			<br>patrón An+B, para cada entero positivo
+			<br>(5n) = 5*1 = 5, 5*2 = 10, 5*3 = 15, etc.
+			<br>(3n+4) = 3*0+4 = 4, 3*1+4 = 7, etc.
+		</dd>
+	
+	<dt>Ejemplos</dt>
+		<dd>
+			<p class="clase0"><a href="https://www.google.es">enlace a Google</a></p>
+			<br>
+			<p class="clase0"><a href="https://www.elmundo.es">enlace a Noticias</a>
+			<p class="clase1">La primera letra es capital y con otro estilo</p>
+			<p class="clase1">Aquí también lo es</p>
+			<h2>Seguimos <em>con</em> las <span>Pseudoclases</span></h2>
+			<h2>En este caso sólo <span>vamos a cambiar</span> las propiedades 
+				<span>del primer hijo</span>
+			</h2>
+			<h2>Podemos ver que <span>sólo</span> cambia la primera de 
+				<span>ellas</span>
+			</h2>
+			<div>
+				<p class="clase2">Esto es pimer párrafo</p>
+				<p class="clase2">Esto es segund párrafo</p>
+				<p class="clase2">Esto es tercero párrafo</p>
+				<p class="clase2">Esto es cuarto párrafo</p>
+			</div>
+		</dd>
+</dl>
+
+</body>
+</html>

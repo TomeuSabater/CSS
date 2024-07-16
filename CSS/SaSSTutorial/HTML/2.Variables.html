@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <title>SaSS Variables</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../CSS/Variables.css">
+
+</head>
+
+<body>
+
+    <h2>SaSS Variables</h2>
+    <dl>
+        <dt>Sass Variables</dt>
+          <dd>
+                With Sass, you can store information in variables, like:<br>
+                <ul>
+                    <li>strings</li>
+                    <li>numbers</li>
+                    <li>colors</li>
+                    <li>booleans</li>
+                    <li>lists</li>
+                    <li>nulls</li>
+                </ul>
+                Sass uses the "$" symbol, followed by a name, to declare variables:
+          </dd>
+
+        <dt>Sass Variable Syntax</dt>
+          <dd>
+            <code>$variablename: value;</code>
+          </dd>
+
+        <dt>Sass Variable Syntax</dt>
+          <dd>The following example declares 4 variables named <code>myFont, myColor, myFontSize, myWidth</code><br>
+            After the variables are declared, you can use them wherever you want
+            <pre>
+                $myFont: Helvetica, sans-serif;
+                $myColor: darkblue;
+                $mybgcolor: lightblue;
+                $myFontSize: 18px;
+                $myWidth: 680px;
+                $myBorder: 1px red double;
+                
+                body {
+                    background-color: $mybgcolor;
+                    font-family: $myFont;
+                    font-size: $myFontSize;
+                    color: $myColor;
+                }
+                
+                #container {
+                    width: $myWidth;
+                    border: $myBorder;
+                }
+            </pre>
+            
+          </dd>
+
+        <dt>Code "Transpiled"</dt>
+          <dd>
+            <pre>
+                body {
+                    background-color: lightblue;
+                    font-family: Helvetica, sans-serif;
+                    font-size: 18px;
+                    color: darkblue;
+                }
+                
+                #container {
+                    width: 680px;
+                    border: 1px red double;
+                }
+            </pre>  
+            <div id="container">This is some text inside a container.</div>
+          </dd>
+
+        <dt>SaSS Variable Scope</dt>
+          <dd>
+            Sass variables are only available at the level of nesting where they are defined.<br>
+            Look at the following example:
+            <pre>
+                $myColor: red; //$myColor variable definition
+
+                h1 {
+                  $myColor: green; // Here we redefine $myColor variable
+                  color: $myColor; 
+                }
+                
+                p {
+                  color: $myColor;
+                }
+            </pre>
+            the CSS output will be:
+            <pre>
+                h1 {
+                    color: green; // Scope is LOCAL
+                  }
+                  
+                  p {
+                    color: red;
+                  }
+            </pre>
+
+          </dd>
+
+        <dt>Using Sass !global</dt>
+          <dd>
+            The default behavior for variable scope can be overridden by using the !global switch.<br>
+            !global indicates that a variable is global, which means that it is accessible on all levels.<br>
+            <pre>
+                $myColor: red; //$myColor variable definition
+
+                h1 {
+                    $myColor: green !global; // Here we redefine $myColor variable as global
+                    color: $myColor;
+                }
+
+                p {
+                    color: $myColor;
+                }
+            </pre>
+            the CSS output will be:
+            <pre>
+                h1 {
+                    color: green; // Scope is local
+                  }
+                  
+                  p {
+                    color: green; // Scope is global
+                  }
+            </pre>
+          </dd>
+        
+        <dt>Tip for Global Variables in scss</dt>
+        <dd>
+          Global variables should be defined outside any rules.<br>
+          It could be wise to define all global variables in its own file, named "_globals.scss", and include the file with the @include keyword.
+        </dd>
+
+          
+    </dl>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+
+$myColor: red; //$myColor variable definition
+
+h2 {  
+  color: $myColor;
+}
+
+h1 {
+    $myColor: green; 
+    color: $myColor;
+}
+
+p {
+    color: $myColor;
+}

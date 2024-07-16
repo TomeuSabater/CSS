@@ -1,0 +1,28 @@
+
+@import "VariablesImport"; /* No file extension is required */
+
+body {
+    background-color: $mybgcolor;
+    font-family: $myFont;
+    font-size: $myFontSize;
+    color: $myColor;
+}
+
+.button-basic { /* This will be the @extend, and it is like a class */
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-report {
+    @extend .button-basic; /* Inherits all the .button-basic properties */
+    background-color: red;
+}
+
+.button-submit {
+    @extend .button-basic; /* Inherits all the .button-basic properties */
+    background-color: green;
+    color: white; 
+}

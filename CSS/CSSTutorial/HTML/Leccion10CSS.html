@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lección 9; Herencia de Propiedades de Estilo</title>
+
+	<style type="text/css">
+
+		li  {color:red}	
+		li span {color:green}
+
+		li.clase1 {
+					color:white;
+					background-color:#D3D3D3
+				}
+		
+		li.clase2 {
+					color:white;
+					background-color:#000000 
+				}
+		
+	</style>
+
+</head>
+<body>
+
+<h2>Herencia de Propiedades de Estilo, Estilo en Función del Contexto y Clases de Estilo</h2>
+
+<dl>
+	<dt>Herencia de los estilos</dt>
+	<dd>Todas las Etiquetas contenidas "dentro" de otras etiquetas heredan los estilos.
+		<br> por ejemplo, si en &lt;body&gt; tenemos "background-color = red" todos los tag
+		<br> tendrán es mismo color de fondo, a no ser que lo redefinamos en cada tag. 
+		<br> Veamos un ejemplo con &lt;li&gt; conteniendo un &lt;span&gt;
+		<ul>
+			<li style="color:green">Verde como color de fondo excepto <span style="color:red">estas palabras en rojo</span></li>
+		</ul>
+	</dd>
+
+	<dt>Definición de un estilo en función del contexto</dt>
+	<dd>En CSS es posible definir un estilo para un tag HTML con la condición de que 
+		<br>este tag esté contenido dentro de otro. Es una manera de definir estilos para
+		<br>combinaciones de marcas. 
+		<br>Ejemplo
+		<ul>
+			<li>Este <span>li</span> es <span>rojo</span> pero solo cuando esté en combinación con &lt;span&gt; es <span>verde</span></li>
+		</ul>
+	</dd>
+	
+	<dt>Defición de estilos mediante Clases</dt>
+	<dd>Hasta ahora, hemos visto como el estilo se aplica a un tag HTML
+		<br>Con el concepto de "Clase" podemos aplicar el estilo a varias marcas al mismo tiempo.
+		<br>Una Clase es una regla de estilo con un nombre. 
+		<br>La sintaxis es como sigue ".nombre_de_clase"
+		<br>Para luego aplicarlo dentro de la marca se especifica "class=nombre_de_clase"
+		<br>Ejemplo
+		<ul>
+			<li>Este li es color rojo</li>
+			<li class="clase1">Esto es li afectado por clase1</li>
+			<li class="clase2">Esto es li afectado por clase2</li>
+		</ul>
+	</dd>
+
+</dl>
+
+</body>
+</html>

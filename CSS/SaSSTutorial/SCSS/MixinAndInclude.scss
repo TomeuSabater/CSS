@@ -1,0 +1,37 @@
+
+@import "VariablesImport"; /* No file extension is required */
+
+/* mixin is like a function */ 
+@mixin important-text { 
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
+    background-color: whitesmoke;
+}
+
+/* Define mixin with two arguments */
+/* One of the arguments has a default value */
+@mixin bordered($color, $width:3px) {
+    border: $width solid $color;
+}
+
+
+body {
+    background-color: $mybgcolor;
+    font-family: $myFont;
+    font-size: $myFontSize;
+    color: $myColor;
+}
+
+.danger {
+    @include important-text;
+  }  
+
+.myArticle {
+    @include bordered(blue, 1px);  // Call mixin with two values
+}
+  
+.myNotes {
+    @include bordered(red); // Call mixin with one value only, the mixin has default value
+}  

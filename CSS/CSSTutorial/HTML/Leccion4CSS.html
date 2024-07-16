@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<title>Lección 4, Orden de aplicación de estilos</title>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="StyleSheet" href="../CSS/Leccion4CSS.css" type="text/css">
+
+  <style type="text/css">
+    h3 {color:#00ff00}
+    h4 {color:#00ff00}
+  </style>
+
+</head>
+
+<body>
+  <h1>Orden de Aplicación de los Estilos</h1>
+
+  <div>
+    <h1>Estilo de Navegador</h1>
+    <h2>Estilo de fichero css</h2>
+    <h3>Estilo a nivel de header</h3>
+    <h4 style="color:#0000ff">Estilo de etiqueta</h4>
+  </div>
+
+  <div>
+    <p>
+      Existe un orden de aplicación para el CSS si este está definido a diferentes niveles:
+    </p>
+    <ol>
+      <li>CSS a nivel de etiqueta, es el que más prioridad tiene, reescribe cualquier estilo de nivel superior</li>
+      <li>CSS a nivel de header, reescribe cualquier estilo de nivel superior</li>
+      <li>CSS a nivel de fichero .css externo, reescribe cualquier estilo a nivel superior</li>
+      <li>CSS por defecto que aplica el navegador, es el de menor prioridad, pero el que se aplica si no existe otro</li>
+    </ol>
+  </div>
+
+</body>
+</html>

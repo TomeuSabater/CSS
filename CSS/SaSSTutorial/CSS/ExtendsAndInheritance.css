@@ -1,0 +1,30 @@
+/* Define general variables and values for website */
+/* In case you need change any value, then you apply the change in this file only */
+/* No file extension is required */
+body {
+  background-color: grey;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: black;
+}
+
+.button-basic, .button-submit, .button-report { /* This will be the @extend, and it is like a class */
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report {
+  /* Inherits all the .button-basic properties */
+  background-color: red;
+}
+
+.button-submit {
+  /* Inherits all the .button-basic properties */
+  background-color: green;
+  color: white;
+}
+
+/*# sourceMappingURL=ExtendsAndInheritance.css.map */

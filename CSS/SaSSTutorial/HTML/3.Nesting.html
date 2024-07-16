@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <title>SaSS Nesting</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../CSS/Nesting.css">
+
+</head>
+
+<body>
+
+  <h2>Sass Nested Rules and Properties</h2>
+  <dl>
+    
+      <dt>Sass Nested Rules</dt> 
+      <dd>Sass lets you nest CSS selectors in the same way as HTML.<br>
+          Look at an example of some Sass code for a site's navigation:
+          <pre>
+              nav {
+                  ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                  }
+                  li {
+                    display: inline-block;
+                  }
+                  a {
+                    display: block;
+                    padding: 6px 12px;
+                    text-decoration: none;
+                  }
+                }
+          </pre>
+          Notice that in Sass, the ul, li, and a selectors are nested inside the nav selector.<br>
+          While in CSS, the rules are defined one by one (not nested):
+          <pre>
+              nav ul {
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                }
+                nav li {
+                  display: inline-block;
+                }
+                nav a {
+                  display: block;
+                  padding: 6px 12px;
+                  text-decoration: none;
+                }
+          </pre>
+          Because you can nest properties in Sass, it is cleaner and easier to read than standard CSS<br>
+          Above exemple is shown like this:
+          <nav>
+            <ul>
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">SASS</a></li>
+            </ul>
+          </nav>
+      </dd>
+
+      <dt>Sass Nested Properties</dt>
+      <dd>Many CSS properties have the same prefix, like font-family, font-size and font-weight or text-align, text-transform and text-overflow, etc.<br>
+        With Sass you can write them as nested properties:
+        <pre>
+          p {
+            font: {
+              family: Ink Journal, Ink Free; /* Aplies the family in sequence */ 
+              size: 18px;
+              weight: bold;
+            }
+            text: {
+              align: center;
+              transform: lowercase;
+              overflow: hidden;
+            }
+          }
+        </pre>
+        The Sass transpiler will convert the above to normal CSS:
+       <pre>
+          p {
+            font-family: Ink Journal, Ink Free; /* Aplies the family in sequence */
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            text-transform: lowercase;
+            text-overflow: hidden;
+          }
+       </pre> 
+      </dd>
+
+      <p>This paragraph is affected by the previous nested properties</p>
+
+   </dl> 
+
+</body>
+
+</html>

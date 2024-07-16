@@ -1,0 +1,48 @@
+
+/* Define standard variables and values for website */
+
+$myFont: Helvetica, sans-serif;
+$myColor: black;
+$mybgcolor: grey;
+$myFontSize: 18px;
+$myWidth: 680px;
+$myBorder: 1px red double;
+
+body {
+    background-color: $mybgcolor;
+    font-family: $myFont;
+    font-size: $myFontSize;
+    color: $myColor;
+}
+
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+    }
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+  }
+
+  p {
+
+    font: {
+      family: Ink Journal, Ink Free; /* Aplies the family in sequence */
+      size: 18px;
+      weight: bold;
+    }
+  
+    text: {
+      align: left;
+      transform: lowercase;
+      overflow: hidden;
+    }
+  
+  }

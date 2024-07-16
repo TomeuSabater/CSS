@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <title>@Mixin and @Include</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../CSS/MixinAndInclude.css">
+
+</head>
+
+<body>
+
+    <h3>@Mixin and @Include</h3>
+
+    <dl>
+
+        <dt>Sass Mixins</dt>
+        <dd>
+            <ul>
+                <li>The @mixin directive lets you create CSS code that is to be reused throughout the website.</li>
+                <li>The @include directive is created to let you use (include) the mixin.</li>
+            </ul>
+        </dd>
+
+        <dt>Defining a Mixin</dt>
+        <dd>A mixin is defined with the @mixin directive.<br>
+            Sass @mixin Syntax:
+            <pre>
+                @mixin name {
+                  property: value;
+                  property: value;
+                  ...
+                }
+            </pre>
+            The next example creates a mixin named "important-text"<br>
+            (note: Hyphens and underscores are considered to be the same; important-text { } and @mixin important_text { } are the same) 
+            <pre>
+                @mixin important-text {
+                    color: grey;
+                    font-size: 20px;
+                    font-weight: bold;
+                    border: 1px solid blue;
+                  }
+            </pre>
+        </dd>
+
+        <dt>Using a Mixin</dt>
+        <dd>The @include directive is used to include a mixin.<br>
+            Sass @include mixin Syntax:
+            <pre>
+                selector {
+                @include mixin-name;
+                }
+            </pre>
+            So, to include the <i>"important-text"</i> mixin created above:
+            <pre>
+                .danger {
+                    @include important-text;
+                    background-color: white;
+                    }
+            </pre>
+            And the Sass transpiler will convert the above to normal CSS:
+            <pre>
+                .danger {
+                    color: red;
+                    font-size: 25px;
+                    font-weight: bold;
+                    border: 1px solid blue;
+                    background-color: white;
+                    }
+            </pre>
+            <span class="danger">This is a text with .danger class, it is developed using a Mixin file</span><br>
+            A mixin can also include other mixins:<br>
+            <pre>
+                @mixin special-text {
+                    @include important-text;
+                    @include link;
+                    @include special-border;
+                    }
+            </pre>
+        </dd>
+        
+        <dt>Passing Variables to a Mixin</dt>
+        <dd>Mixins accept arguments. This way you can pass variables to a mixin.<br>
+            Here is how to define a mixin with arguments:
+            <pre>
+                /* Define mixin with two arguments */
+
+                @mixin bordered($color, $width) {
+                    border: $color $width solid ;
+                }
+                
+                .myArticle {
+                    @include bordered(blue, 1px);  // Call mixin with two values
+                }
+                
+                .myNotes {
+                    @include bordered(red, 2px); // Call mixin with two values
+                }
+            </pre>
+            After compilation, the CSS will look like this:
+            <pre>
+                .myArticle {
+                    border: 1px solid blue;
+                    }
+                    
+                    .myNotes {
+                    border: 2px solid red;
+                    }
+            </pre>
+            <span class="myArticle">And this is myArticle example</span><br>
+            <span class="myNotes">And this is myNotes example</span>
+        </dd>
+        
+
+        <dt>Default Values for a Mixin</dt>
+        <dd>It is also possible to define default values for mixin variables:
+            <pre>
+                @mixin bordered($color: blue, $width: 1px) {
+                    border: $width solid $color;
+                    }
+            </pre>
+            Then, you only need to specify the values that change when you include the mixin:
+            <pre>
+                .myTips {
+                    @include bordered($color: orange);
+                    }
+            </pre>
+        </dd>
+        
+
+        <dt>Using a Mixin For Vendor Prefixes</dt>
+        <dd>Another good use of a mixin is for vendor prefixes.<br>
+            Here is an example for transform:
+            <pre>
+                @mixin transform($property) {
+                    -webkit-transform: $property;
+                    -ms-transform: $property;
+                    transform: $property;
+                }
+                    
+                .myBox {
+                    @include transform(rotate(20deg));
+                }
+            </pre>
+            After compilation, the CSS will look like this:
+            <pre>
+                .myBox {
+                -webkit-transform: rotate(20deg);
+                -ms-transform: rotate(20deg);
+                transform: rotate(20deg);
+                }
+            </pre>
+        </dd>
+
+    </dl>
+
+</body>
+</html>

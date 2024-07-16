@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<title>Lección 6: Tipos de Fuentes</title>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		@font-face{
+			font-family: 'Whisper';
+			src:url("/FUENTES/Whisper/Whisper-Regular.ttf"); 
+		}
+		h1{
+			font:italic bold 26pt 'Comic Sans MS';
+		}
+	</style>
+
+</head>
+
+<body>
+
+<h1>Formato de Fuentes</h1>
+
+<ul>
+	<li>Existen diferencias en el modo en que los navegadores interpretan las reglas de estilo referente a las fuentes.
+	<li>Existen muchas diferencias entre los valores que admite un tipo de fuente y otro. 
+	Por ejemplo: se pueden especificar hasta nueve valores de negrita (bold), pero muchas fuentes están diseñadas de tal 
+	forma que solo permiten ser visualizadas en dos valores: normal y negrita.
+	<li>De nada sirve que especifiquemos una fuente especial, y maravillosa, si el usuario no la tiene instalada en su ordenador.
+</ul>
+
+<p><a href="https://www.xataka.com/basics/fuentes-windows-10-como-instalarlas-gestionarlas">Revisar cómo instalar una fuente nueva en el PC</a></p>
+
+<h3>Propiedades de las Fuentes</h3>
+  
+<dl>
+
+  <dt>Font-Family</dt>
+  <dd>Esta propiedad permite definir el <strong>tipo de letra</strong>. 
+   		<br>Se pueden definir varias fuentes por si alguna no se encuentra disponible para el navegador, 
+			esto se hace separando por coma todas las fuentes (se eligen de izquierda a derecha). 
+  		<br>Algunas de las fuentes más comunes que puede acceder el navegador son:
+  		<br><i>Arial, Arial Black, Arial Narrow, Courier New, Georgia, Impact, Tahoma, Times New Roman, Verdana.</i>
+  		<br>Si la fuente no está disponible, el navegador selecciona el estilo por defecto.
+  		<br>Veamos un ejemplo:
+  		<ul>
+			<li style="font-family:Tahoma">Esto es Tahoma</li>
+			<li style="font-family:Arial Rounded MT">Esto es Arial Rounded MT</li>
+			<li style="font-family:Comic Sans MS">Esto es Comic Sans MS</li>
+			<li style="font-family:Ink Free">Esto es Ink Free</li>
+			<li style="font-family:Ink Journal, Ink Free">Esto es Ink Free, porque Ink Journal no la encuentra y aplica otra</li>
+			<li style="font-family:Whisper">Esto es una fuente de Google</li>
+  		</ul>
+  	</dd>
+  	
+  <dt>Font-Size</dt>
+  <dd>Esta propiedad modifica <strong>el tamaño de la fuente.</strong>
+  	<br>Se puede especificar de tres maneras:
+  	<ol>
+  		<li>Usando palabras especiales que hacen referencia a tamaños predefinidos:
+  			<ul>
+  				<li style="font-size:xx-small">Esto es xx-small, una fuente muy pequeña</li>
+  				<li style="font-size:x-small">Esto es x-small, una fuente pequeña</li>
+  				<li style="font-size:small">Esto es small, una fuente un poco pequeña</li>
+  				<li style="font-size:medium">Esto es medium, una fuente de tamaño normal, el que aplica por defecto</li>
+  				<li style="font-size:large">Esto es large, una fuente un poco grande</li>
+  				<li style="font-size:x-large">Esto es x-large, una fuente grande</li>
+  				<li style="font-size:xx-large">Esto es xx-large, una fuente muy grande</li>
+  			</ul>
+  		</li>
+ 		<li>Aumentando o disminuyendo el tamaño:
+ 			<br>En este caso se aumenta o disminuye el tamaño de la letra sobre el tamaño que le correspondería 
+			a la letra por defecto. Valores:
+ 			<ul>
+ 				<li style="font-size:smaller">Tamaño disminuido sobre el tamaño por defecto</li>
+ 				<li>Tamaño normal que tiene el navegador por defecto</li>
+ 				<li style="font-size:larger">Tamaño aumentado sobre el tamaño por defecto</li>
+ 			</ul>
+ 		</li> 
+ 		<li>Modo exacto:
+ 			<br>En este caso se indica el tamaño de la letra con su valor numérico. 
+ 			<br>Tras este número se indica la medida en la que se debe medir el número. 
+ 			<br>Ejemplos: 12px, 2mm, 12pt, 1.2em, 120%
+ 			<ul>
+ 				<li style="font-size:100%">Tamaño a 100%</li>
+ 				<li style="font-size:15px">Tamaño a 15px</li>
+ 				<li style="font-size:1cm">Tamaño a 1 cm</li>
+ 			</ul>
+ 		</li>
+  	</ol>
+  </dd>
+    
+  <dt>Font-Style</dt>
+  <dd>Esta propiedad asigna el <strong>Estilo</strong> de la fuente
+  	<br>Se permiten los siguientes valores:
+  	<ul>
+  		<li style="font-style:normal">Normal: y se visualiza en modo normal que es el modo por defecto</li>
+  		<li style="font-style:italic">Italic: y se visualiza en letra cursiva</li>
+  		<li style="font-style:oblique">Oblique: el valor oblique visualiza una fuente aún más inclinada que la cursiva. 
+  			<br>La diferencia entre italic y oblique pasará desapercibida en la mayor parte de las fuentes.
+  		</li>
+  	</ul>
+  </dd>
+    
+  <dt>Font-Weight</dt>
+  <dd>El valor 'font-weight' determina el grosor de la fuente. 
+  	<br>Los valores posibles son:
+  	<ul>
+  		<li style="font-weight:normal">normal: espesor normal. El valor por defecto</li>
+  		<li style="font-weight:bold">bold: negrita</li>
+  		<li>Valores numéricos: 100, 200, 300, 400, 500, 600, 700, 800, 900. 
+  			<br>Para que funcionen esos valores, debemos tener tipos de letra que incluyan esos grosores. 
+  			<br>El valor "normal" equivale a 400. 'Bold' equivale a 700.
+  		</li>
+  		<li style="font-weight:bolder">bolder: más gruesa. Aumenta el grosor actual de la letra (al siguiente disponible).</li>
+  		<li style="font-weight:lighter">lighter: más delgada. Disminuye el grosor actual de la letra (al siguiente disponible).</li>
+  	</ul>
+  </dd>  
+    
+  <dt>Font-Variant</dt>
+  <dd>Define si la fuente se muestra en mayúsculas tipo normal o pequeñas. 
+  	<br>Los valores:
+  	<ul>
+  		<li style="font-variant:normal">normal: son letras normales</li>
+  		<li style="font-variant:small-caps">small-caps: convierte las letras minúsculas en mayúsculas de un tamaño más pequeño que el normal. 
+  			<br>Si el tipo de fuente seleccionado no tiene versión smalls-caps, el navegador visualizará el texto en mayúsculas ordinarias.
+  		</li>
+  	</ul> 
+  </dd>
+    
+  <dt>Font</dt>
+  <dd>Permite desde una sola propiedad cambiar de un solo golpe todas las anteriores. 
+  	<br>Su sintaxis es:
+  	<br><strong>font: font-style font-variant font-weight font-size font-family</strong>
+  	<br>El orden tiene que ser estrictamente ese, pero algunas propiedades se pueden dejar sin utilizar. 
+  	<br>Aunque, se requieren los valores de tamaño de fuente y familia de fuentes, si falta uno de esos valores, se utiliza su valor predeterminado
+  	<p style="font:italic bold 26pt 'Comic Sans MS'">Ejemplo con cursiva y negrita de tipo Comic a 26 pt</p>
+  </dd>
+</dl>
+
+
+</body>
+</html>

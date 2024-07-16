@@ -1,0 +1,30 @@
+/* Define general variables and values for website */
+/* In case you need change any value, then you apply the change in this file only */
+/* No file extension is required */
+/* mixin is like a function */
+/* Define mixin with two arguments */
+/* One of the arguments has a default value */
+body {
+  background-color: grey;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: black;
+}
+
+.danger {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+  background-color: whitesmoke;
+}
+
+.myArticle {
+  border: 1px solid blue;
+}
+
+.myNotes {
+  border: 3px solid red;
+}
+
+/*# sourceMappingURL=MixinAndInclude.css.map */

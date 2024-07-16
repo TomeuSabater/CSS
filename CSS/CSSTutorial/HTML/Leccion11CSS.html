@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lección 11; Propiedades Relacionadas con las Listas</title>
+
+	<style type="text/css">
+
+		ol.armenian {list-style-type:armenian}
+		ol.decimal {list-style-type:decimal}
+		ol.decimal-leading-zero {list-style-type:decimal-leading-zero}
+		ol.upper-roman {list-style-type:upper-roman}
+		ol.lower-roman {list-style-type:lower-roman}
+		ol.upper-alpha {list-style-type:upper-alpha}
+		ol.lower-alpha {list-style-type:lower-alpha}
+
+		ul.circle {list-style-type:circle}
+		ul.square {list-style-type:square}
+		ul.disc {list-style-type:disc}
+		ul.none {list-style-type:none}
+
+		ul.list-style-image {list-style-image:url("../PICS/sqpurple.gif")}
+
+		ul.outside {list-style-position:outside}
+		ul.inside {list-style-position:inside}
+
+		ul.list-style {list-style: square inside}
+
+	</style>
+
+</head>
+<body>
+
+<H2>Propiedades Relacionadas con las Listas</H2>
+
+<dl>
+	<dt>list-style-type</dt>
+	<dd>Permite especificar el tipo de elemento de numeración de la lista
+		<br>Es recomendable que las &lt;ol&gt; muestren valores numerados
+		<br>y que las &lt;ul&gt; muestre valores no numerados
+			<ol class="armenian">
+				<li>Esto</li>
+				<li>es</li>
+				<li>armenian</li>
+			</ol>
+			<ol class="decimal">
+				<li>Esto</li>
+				<li>es</li>
+				<li>decimal</li>
+			</ol>
+			<ol class="decimal-leading-zero">
+				<li>Esto</li>
+				<li>es</li>
+				<li>decimal-leading-zero</li>
+			</ol>
+			<ol class="upper-roman">
+				<li>Esto</li>
+				<li>es</li>
+				<li>upper-roman</li>
+			</ol>
+			<ol class="lower-roman">
+				<li>Esto</li>
+				<li>es</li>
+				<li>lower-roman</li>
+			</ol>
+			<ol class="upper-alpha">
+				<li>Esto</li>
+				<li>es</li>
+				<li>upper-alpha</li>
+			</ol>
+				<ol class="lower-alpha">
+				<li>Esto</li>
+				<li>es</li>
+				<li>lower-alpha</li>
+			</ol>
+			
+			<ul class="circle">
+				<li>Esto</li>
+				<li>es</li>
+				<li>circle</li>
+			</ul>
+			<ul class="square">
+				<li>Esto</li>
+				<li>es</li>
+				<li>square</li>
+			</ul>
+			<ul class="disc">
+				<li>Esto</li>
+				<li>es</li>
+				<li>disc</li>
+			</ul>
+			<ul class="none">
+				<li>Esto</li>
+				<li>es</li>
+				<li>none</li>
+			</ul>
+	</dd>
+	
+	<dt>list-style-image</dt>
+	<dd>Permite especificar una imagen para encabezar los elementos de la lista
+		<br>La imagen debe ser de alguno de los formatos habituales (gif, jpg, jpeg, etc.)
+		<br>Tener en cuenta el tamaño de la imagen
+		<br>Ejemplo
+		
+		<ul class="list-style-image">
+			<li>Esto</li>
+			<li>es</li>
+			<li>list-style-image</li>
+		</ul>
+	</dd>
+	
+	<dt>list-style-position</dt>
+	<dd>Permite especificar si los adornos están alineados con el texto o no
+		<ul class="outside">
+			<li>Esto</li>
+			<li>es</li>
+			<li>outside</li>
+		</ul>
+		<ul class="inside">
+			<li>Esto</li>
+			<li>es</li>
+			<li>inside</li>
+		</ul>
+	</dd>
+	
+	<dt>list-style</dt>
+	<dd>Permite con un solo tag especificar varios propiedades
+	<br>Ejemplo
+		<ul class="list-style">
+			<li>Esto</li>
+			<li>es</li>
+			<li>list-style</li>
+		</ul>
+	</dd>
+
+</dl>
+
+</body>
+</html>

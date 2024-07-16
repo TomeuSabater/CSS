@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <title>@extend and Inheritance</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../CSS/ExtendsAndInheritance.css">
+
+</head>
+
+<body>
+
+    <h3>@extend and Inheritance</h3>
+
+    <dl>
+
+        <dt>@extend Directive</dt>
+        <dd>
+            <ul>
+                <li>The @extend directive lets you share a set of CSS properties from one selector to another.</li>
+                <li> The @extend directive is useful if you have almost identically styled elements that only differ in some
+                    small details.</li>
+            </ul>
+        </dd>
+
+        <dt>Defining @extend</dt>
+        <dd>This Sass example creates a basic style for buttons. Then, we create one style for "Report" button and one style for
+            "Submit" button.
+            Both "Report" and "Submit" button inherit all the CSS propoerties from the .button-basic class, trough the @extend
+            directive.
+            In addition, they've their own colors defined:<br>
+            <pre>
+                .button-basic  {
+                    border: none;
+                    padding: 15px 30px;
+                    text-align: center;
+                    font-size: 16px;
+                    cursor: pointer;
+                    }
+                    
+                    .button-report  {
+                    @extend .button-basic;
+                    background-color: red;
+                    }
+                    
+                    .button-submit  {
+                    @extend .button-basic;
+                    background-color: green;
+                    color: white;
+                    }
+            </pre>
+            After the .scss transpiling the .css looks like this:
+            <pre>
+                .button-basic, .button-report, .button-submit {
+                    border: none;
+                    padding: 15px 30px;
+                    text-align: center;
+                    font-size: 16px;
+                    cursor: pointer;
+                    }
+                    
+                    .button-report  {
+                    background-color: red;
+                    }
+                    
+                    .button-submit  {
+                    background-color: green;
+                    color: white;
+                    }
+            </pre>
+            <p>Result is like this:</p>
+            <button class="button-basic">This is .button-basic</button>
+            <button class="button-report">This is .button-report</button>
+            <button class="button-submit">This is .button-submit</button>
+        </dd>
+    </dl>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <title>SaSS Introduction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../CSS/Intro.css">
+
+</head>
+
+<body>
+
+    <h1>SaSS Introduction & Installation</h1>
+    <h3>Sass is a CSS pre-processor. Reduces repetition of CSS and therefore saves time.</h3>
+    
+   <ul>
+      <li>Sass stands for Syntactically Awesome StyleSheet</li>  
+      <li>Sass is an extension to CSS</li> 
+      <li>Sass is a CSS pre-processor</li> 
+      <li>Sass is completely compatible with all versions of CSS</li> 
+      <li>Sass reduces repetition of CSS and therefore saves time</li> 
+      <li>Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in 2006</li> 
+      <li>Sass is free to download and use</li> 
+    </ul> 
+
+    <dl>
+      <dt>Why Use Sass?</dt>
+        <dd>Stylesheets are getting larger, more complex, and harder to maintain.<br>
+          This is where a CSS pre-processor can help.<br>
+          Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions, 
+          and other stuff.
+        </dd>
+
+      <dt>Example:</dt> 
+        <dd>We have a website with main color: #a2b9bc<br>
+          Instead of typing the above value a lot of times, you can use Sass and write this:<br>
+          <code>$primary_1: #a2b9bc;<br>
+          .main-header {<br>
+            background-color: $primary_1;<br>
+          }</code><br>
+          So, when using Sass, and the primary color changes, you only need to change it in one place.
+        <dd>
+
+      <dt>How Does Sass Work?</dt>
+        <dd>
+          A browser does not understand Sass code. Therefore, you will need a Sass pre-processor to convert Sass code into standard CSS.<br>
+          This process is called <i>"transpiling"</i>. So, you need to give a transpiler (some kind of program) some Sass code and then get some CSS code back.<br>
+          Tip: <i>"Transpiling"</i> is a term for taking a source code written in one language and transform/translate it into another language.
+        </dd>
+
+      <dt>SaSS File Type</dt>
+        <dd>
+          Sass files has the ".scss" file extension.<br>
+        </dd>
+
+      <dt>SaSS Comments</dt>
+        <dd>
+          Sass supports standard CSS comments /* comment */, and in addition it supports inline comments // comment
+        </dd>
+
+      <dt>SaSS Installation</dt>
+        <dd>
+          Requirements:
+          <ul>
+              <li>Operating system - Sass is platform independent</li>
+              <li>Browser support - Sass works in Edge/IE (from IE 8), Firefox, Chrome, Safari, Opera</li> 
+              <li>Programming language - Sass is based on Ruby</li>
+          </ul> 
+        </dd>
+
+      <dt>Official Sass Web Site</dt>
+        <dd>
+          Read more about Sass at the official Sass web site: <a href="https://sass-lang.com/">https://sass-lang.com/</a>
+        </dd>
+
+      <dt>Install Sass</dt>
+        <dd>
+          There are several ways to install Sass in your system.<br> 
+          There are many applications that will get you up and running with Sass in a few minutes for Mac, Windows, and Linux.<br>
+          Some of these are free, but some are paid apps.<br>
+          You can read more about them here:<a href="https://sass-lang.com/install/">sass-lang.com/install</a>
+          <ol>
+            <li>Download the dart-sass-1.69.5-windows-x64.zip (January 2024) from <a href="https://github.com/sass/dart-sass/releases/tag/1.69.5">https://github.com/sass/dart-sass/releases/tag/1.69.5</a></li>
+            <li>Unzip the content and move the full content to some folder: C:\Program Files\dart-sass-1.69.5-windows-x64\dart-sass</li>
+            <li>Add the path of the folder to the PATH system variables</li>
+            <li>Open a CMD and type the next command line <code>sass --version</code> the response should be <code>1.69.5</code></li>
+            <li>Try it with the next command: <code>sass {yourpath for .scss files}\index.scss {your path for .css files}\index.css</code><br>
+              where the index.scss is the next file<br>
+              <code>$primary_1: #a2b9bc;<br>
+                .main-header {<br>
+                  background-color: $primary_1;<br>
+                }
+              </code><br>
+              then the resulting file is index.css and must contain the next code:<br>
+              <code>
+              .main-header {<br>
+                background-color: #a2b9bc;<br>
+              }
+              </code>
+            </li>
+          </ol>
+        </dd>
+
+    </dl>
+    
+   
+</body>
+</html>
