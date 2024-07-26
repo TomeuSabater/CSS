@@ -1,28 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
 
-  <title>CSS Leccion 2, CSS a nivel de página </title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style type="text/css">
-	h1 {
-		color:#ff0000;
-		background-color:#ffff00;
-	}
-	h3 {
-		color:#00ff00;
-	}
-  </style>
-
-</head>
-
-<body>
-	<h1>Ahora todos los h1 se escriben en rojo y fondo amarillo</h1>
-	<h2>Esto es h2, por tanto no afectado</h2>
-	<h1>Esto es h1, por tanto, afectado</h1>
-	<h3>Esto es h3, por tanto, afectado</h3>
-</body>
+	<head>
+	
+	  <title>CSS Leccion 2, CSS a nivel de página</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	  <style type="text/css">
+		h2 {
+			color:#ff0000;
+			background-color:#ffff00;
+		}
+		h4 {
+			color:#00ff00;
+		}
+	  </style>
+	
+	</head>
+	
+	<body>
+	
+		<h1>Definición de estilos a nivel de página, Internal CSS</h1>
+		
+		<p>Se puede definir un estilo para que afecte a todos los tag de una página<br>
+		para ellos, usamos los tag &lt;style&gt;&lt;/style&gt; en la cabezera del documento</p>
+		
+		<p>La etiqueta &lt;style&gt; tiene el atributo type, que permiten al navegador identificar el tipo de instrucciones que siguen.<br>
+		 Se usa “text/css”. Se puede observar que en la cabecera de la página se define la sección:</p>
+		
+		<dl>
+			<dt>Definición de estilos a nivel de página ejemplo</dt>
+			<dd>
+				<pre>
+		&lt;head&gt;
+		
+		  &lt;title&gt;CSS Leccion 2, CSS a nivel de página&lt;/title&gt;
+		  &lt;meta charset="utf-8"&gt;
+		  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+		
+		  &lt;style type="text/css"&gt;
+			h2 {
+				color:#ff0000;
+				background-color:#ffff00;
+			}
+			h4 {
+				color:#00ff00;
+			}
+		  &lt;/style&gt;
+		
+		&lt;/head&gt;
+				
+				</pre>
+			</dd>
+			
+		</dl>
+	
+		<h2>Ahora todos los h2 se escriben en rojo y fondo amarillo</h2>
+		<h3>Esto es h3, por tanto no está afectado por ningún estilo</h3>
+		<h4>Esto es h4, por tanto, afectado por un estilo</h4>
+		<h5>Esto es h5, por tanto, no afectado</h5>
+		
+		<hr>
+		<p>&copy; CESUR, 2024-2025</p>
+		
+	</body>
 
 </html>

@@ -1,21 +1,74 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
+	<head>
+	
+		<title>Lección 3, CSS a nivel de fichero</title>
+			
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="StyleSheet" href="../CSS/Leccion3CSS.css" type="text/css">
+	
+	</head>
+		
+	<body>
+	
+		<h1>Definición de estilos a nivel de un fichero externo, External CSS</h1>
+		
+		<ul>
+			<li>Es la forma más habitual de insertar los estilos si se desea que el estilo sea "uniforme" para todas las páginas de la web.</li>
+			<li>Se crea un archivo de texto con extensión .css en el que se inserta el código CSS. </li>
+			<li>La ventaja es que el mismo archivo nos sirve para aplicar su código a diferentes documentos o a toda una web.</li>
+			<li>Si modificamos el archivo .css, todos los documentos que utilicen esa hoja de estilo aplicaran automáticamente los cambios.</li>
+		</ul>
+			 
+		<p>Para indicar el archivo de estilos externo, debemos agregar en la etiqueta &lt;head&gt; del archivo HTML la siguiente etiqueta:<br><br>
+			&lt;link rel="stylesheet" href="fichero.css" type="text/css"&gt;<br>
+		</p>
+		
+		<p>La etiqueta "link" tiene los atributos:</p>
+		<ul>
+			<li>rel. Contiene siempre el valor "stylesheet" para indicar que estamos incluyendo una hoja de estilos.</li>
+			<li>href. Con el que se indica la ruta de la hoja de estilos que se está incluyendo.</li>
+			<li>type. Indica el valor "text/css". Se puede omitir.</li>
+		</ul>
 
-	<title>Lección 3, CSS a nivel de fichero</title>
+		<dl>
+			<dt>Ejemplo de estilos mediante un fichero externo</dt>
+			<dd>
+				<pre>
+	&lt;head&gt;
+		&lt;title&gt;Lección 3, CSS a nivel de fichero&lt;/title&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+		
+		&lt;link rel="stylesheet" href="../CSS/Leccion3CSS.css" type="text/css"&gt;
+	&lt;/head&gt;		
 
+				</pre>
+			</dd>
+			
+			<dt>Donde el fichero Leccion3CSS.css sería</dt>
+			<dd>
+				<pre>
+@charset "UTF-8";
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="StyleSheet" href="../CSS/Leccion3CSS.css" type="text/css">
-
-</head>
-
-<body>
-	<h1>h1 en Rojo</h1>
-	<h2>h2 en Verde</h2>
-	<h3>h3 en Azul</h3>
-</body>
+/* Definimos los headers de colores */
+h2 {color:#ff0000}
+h3 {color:#00ff00}
+h4 {color:#0000ff}
+				</pre>
+				<p>dando como resultado:</p>
+				<h2>h2 en Rojo</h2>
+				<h3>h3 en Verde</h3>
+				<h4>h4 en Azul</h4>
+				
+			</dd>
+			
+		</dl>
+			
+		<hr>
+		<p>&copy; CESUR, 2024-2025</p>
+	</body>
 </html>
