@@ -1,44 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 
 	<title>Lección 4, Orden de aplicación de estilos</title>
 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="StyleSheet" href="../CSS/Leccion4CSS.css" type="text/css">
 
-  <link rel="StyleSheet" href="../CSS/Leccion4CSS.css" type="text/css">
-
-  <style type="text/css">
-    h3 {color:#00ff00}
-    h4 {color:#00ff00}
-  </style>
+	<style type="text/css">
+	   h3 {color:#00ff00}
+	   h4 {color:#00ff00}
+	</style>
 
 </head>
 
 <body>
-  <h1>Orden de Aplicación de los Estilos: CASCADING ORDER</h1>
 
-  <div>
-    <h1>Estilo de Navegador</h1>
-    <h2>Estilo de fichero css</h2>
-    <h3>Estilo a nivel de header</h3>
-    <h4 style="color:#0000ff">Estilo de etiqueta</h4>
-  </div>
+	<h1>Orden de Aplicación de los Estilos: CASCADING ORDER</h1>
+	
+	<div>
+		<p>El CSS se denomina "Cascade" porque se aplica en cascada.<br>
+			 Se puede definir CSS Inline, Intenal y External sobre una misma página y el formato final siempre sigue el mismo orden:</p>
+			
+		<p>En el siguiente ejemplo tenemos definido los siguiente:</p>
+		<ul>
+			<li>&lt;h1&gt;Estilo de Navegador&lt;/h1&gt; sin ningún css definido sobre este tag</li>
+			<li>Un fichero .css con el siguiente contenido:
+				<pre>
+				  &lt;link rel="StyleSheet" href="../CSS/Leccion4CSS.css" type="text/css"&gt;
+				  @charset "UTF-8";
+		
+					/* Definimos los headers de colores */
+					h2 {color:#ff0000}
+					h3 {color:#ff0000}
+					h4 {color:#ff0000}
+				</pre>
+			</li> 
+			<li>Una cabezera con el siguiente contenido
+				<pre>
+					&lt;style type="text/css"&gt;
+		   			h3 {color:#00ff00}
+		   			h4 {color:#00ff00}
+					&lt;/style&gt;
+				</pre>
+			</li>
+				<li>Finalmente, un tag definido de la siguiente manera:<br>
+				<pre>
+					  &lt;h4 style="color:#0000ff"&gt;Estilo de etiqueta&lt;/h4&gt;
+				</pre>		
+			</li>
+		</ul>
+		
+		<p>El resultado final es como sigue: (código y resultado)</p> 
+		<pre>
+			&lt;h1&gt;Estilo de Navegador&lt;/h1&gt;
+		  	&lt;h2&gt;Estilo de fichero css&lt;/h2&gt;
+		  	&lt;h3&gt;Estilo a nivel de header&lt;/h3&gt;
+		  	&lt;h4 style="color:#0000ff"&gt;Estilo de etiqueta&lt;/h4&gt;
+		</pre>
+		<h1>Estilo de Navegador</h1>
+		<h2>Estilo de fichero css</h2>
+		<h3>Estilo a nivel de header</h3>
+		<h4 style="color:#0000ff">Estilo de etiqueta</h4>
+	</div>
+	
+	<div>
+	  <p>Existe un orden de aplicación para el CSS si este está definido a diferentes niveles: (de mayor a menor prioridad)</p>
+	  <ol>
+	    <li>CSS a nivel de etiqueta (Inline), es el que más prioridad tiene, reescribe cualquier estilo de nivel superior</li>
+	    <li>CSS a nivel de header (Internal), reescribe cualquier estilo de nivel superior</li>
+	    <li>CSS a nivel de fichero .css externo (External), reescribe cualquier estilo a nivel superior</li>
+	    <li>CSS por defecto que aplica el navegador, es el de menor prioridad, pero el que se aplica si no existe otro</li>
+	  </ol>
+	</div>
 
-  <div>
-    <p>
-      Existe un orden de aplicación para el CSS si este está definido a diferentes niveles:
-    </p>
-    <ol>
-      <li>CSS a nivel de etiqueta, es el que más prioridad tiene, reescribe cualquier estilo de nivel superior</li>
-      <li>CSS a nivel de header, reescribe cualquier estilo de nivel superior</li>
-      <li>CSS a nivel de fichero .css externo, reescribe cualquier estilo a nivel superior</li>
-      <li>CSS por defecto que aplica el navegador, es el de menor prioridad, pero el que se aplica si no existe otro</li>
-    </ol>
-  </div>
+	<hr>
+	<p>&copy; CESUR, 2024-2025</p>
 
 </body>
 </html>
