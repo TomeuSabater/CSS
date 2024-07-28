@@ -1,19 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 
 	<title>Lección 6: Tipos de Fuentes</title>
 
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 	<style>
+		#id_1 {
+	  		font-family: "Sofia", sans-serif;
+		}
+	
 		@font-face{
 			font-family: 'Whisper';
 			src:url("../FUENTES/Whisper/Whisper-Regular.ttf"); 
 		}
+			
 		h1{
 			font:italic bold 26pt 'Comic Sans MS';
 		}
@@ -32,11 +36,34 @@
 		forma que solo permiten ser visualizadas en dos valores: normal y negrita.</li>
 		<li>También hay que tener en cuenta que de nada sirve que especifiquemos una fuente especial, y maravillosa, si el usuario no la tiene instalada en su ordenador.</li>
 	</ul>
-	
-	
-	<h2>Cómo instalar una fuente</h2>
+		
+	<h2>Cómo instalar una fuente en Windows</h2>
 	<p>Se recomienda revisar el siguiente enlace antes de continuar con este apartado del tutorial de CSS<br>
 	<a href="https://www.xataka.com/basics/fuentes-windows-10-como-instalarlas-gestionarlas">Revisar cómo instalar una fuente nueva en el PC</a></p>
+
+
+	<h2>Google Fonts</h2>
+	<p>If you do not want to use any of the standard fonts in HTML, you can use Google Fonts.<br>
+	Google Fonts are free to use, and have more than 1000 fonts to choose from.</p>
+	<p>Just add a special style sheet link in the &lt;head&gt; section and then refer to the font in the CSS. Example:<br>
+	<pre>
+&lt;head&gt;
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"&gt;
+&lt;style&gt;
+		#id_1 {
+	  		font-family: "Sofia", sans-serif;
+		}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;p id="id_1"&gt;This font is Sofia from Google Fons&lt;/p&gt; 
+&lt;/body&gt;
+	</pre>
+	
+	<p id="id_1">This font is Sofia from Google Fons</p> 
+	
+	<p>To use multiple Google fonts, just separate the font names with a pipe character (|), like this:<br>
+	&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong"&gt;</p>
 
 
 	<h2>CSS Web Safe Fonts</h2>
@@ -64,6 +91,7 @@
 		<li style="font-family:Brush Script MT">Brush Script MT is a web safe font for HTML and CSS</li>
 	</ul>
 	
+	
 	<h2>CSS Font Fallbacks</h2>
 	<p>Commonly Used Font Fallbacks<br>
 	Below are some commonly used font fallbacks, organized by the 5 generic font families:</p>
@@ -74,7 +102,8 @@
 		<li>Cursive: Brush Script MT</li>
 		<li>Fantasy: Copperplate, Papyrus</li>
 	</ul>
-		
+	
+	
 	<h3>Propiedades de las Fuentes</h3>
 	  
 	<dl>
@@ -97,12 +126,12 @@
 &lt;/ul&gt;
 	  	</pre>
 	  	<ul>
-				<li style="font-family:Tahoma">Esto es Tahoma</li>
-				<li style="font-family:Arial Rounded MT">Esto es Arial Rounded MT</li>
-				<li style="font-family:Comic Sans MS">Esto es Comic Sans MS</li>
-				<li style="font-family:Ink Free">Esto es Ink Free</li>
-				<li style="font-family:Ink Journal, Ink Free">Esto es Ink Free, porque Ink Journal no la encuentra y aplica la primera</li>
-				<li style="font-family:Whisper">Esto es una fuente de Google</li>
+			<li style="font-family:Tahoma">Esto es Tahoma</li>
+			<li style="font-family:Arial Rounded MT">Esto es Arial Rounded MT</li>
+			<li style="font-family:Comic Sans MS">Esto es Comic Sans MS</li>
+			<li style="font-family:Ink Free">Esto es Ink Free</li>
+			<li style="font-family:Ink Journal, Ink Free">Esto es Ink Free, porque Ink Journal no la encuentra y aplica la primera</li>
+			<li style="font-family:Whisper">Esto es una fuente de Google</li>
 	  	</ul>
 	  </dd>
 	  	
@@ -231,13 +260,12 @@
 	  <dd>Permite desde una sola propiedad cambiar de un solo golpe todas las anteriores.<br> 
 	  	Su sintaxis es: <strong>font: font-style font-variant font-weight font-size font-family</strong><br>
 	  	El orden tiene que ser estrictamente ese, pero algunas propiedades se pueden dejar sin utilizar.<br> 
-	  	Aunque, se requieren los valores de tamaño de fuente y familia de fuentes, si falta uno de esos valores, se utiliza su valor predeterminado
+	  	Se requieren los valores "font-size" and "font-family, si se omite alguno de los otros valores se utiliza su valor predeterminado
 	  	<pre>
 &lt;p style="font:italic small-caps bold 26pt 'Comic Sans MS'"&gt;Ejemplo con cursiva y negrita de tipo Comic a 26 pt&lt;/p&gt;
 	  	</pre>	
 	  	<p style="font:italic small-caps bold 26pt 'Comic Sans MS'">Ejemplo con cursiva y negrita de tipo Comic a 26 pt</p>
 	  </dd>
-	  
 	</dl>
 	
 	<hr>

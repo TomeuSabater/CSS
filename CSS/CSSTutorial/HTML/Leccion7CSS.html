@@ -1,115 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
 
+<head>
+	<title>Lección 7; Formateo de Texto</title>
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Lección 7; Propiedades del Texto</title>
 
 	<style>
-		h1{ text-shadow: 2px 2px 5px blueviolet; }
+		h1, #id_1{ text-shadow: 2px 2px 5px blueviolet; }
 	</style>
 
 </head>
 
 <body>
 
-<h1>Propiedades Relacionadas con el Texto</h1>
-
-<dl>
-
-	<dt>Color</dt>
-	<dd>Permite definir el color del texto.
-		<ul>
-			<li style="color:red">Este texto es de color rojo</li>
-			<li style="color:yellow">Este texto es de color amarillo</li>
-			<li style="color:green">Este texto es de color verde</li>
-		</ul>
-	</dd>
+	<h1>Dando Formato al Texto</h1>
+	<p id="id_1">CSS has a lot of properties for formatting text.</p>
 	
-	<dt>Text-decoration</dt>
-	<dd>Permite decorar el texto
-	<br>por ejemplo, que aparezca subrayado o con una línea en la parte superior
-	<ul>
-		<li style="text-decoration: none">none: sin subrayado, muy útil para eliminar el subrayado por defecto en los enlaces</li>
-		<li style="text-decoration: underline">underline: subrayado debajo</li>
-		<li></li>
-		<li style="text-decoration: overline">overline: subrayado encima</li>
-		<li style="text-decoration: line-through">line-through: tachado</li>
-		<li style="text-decoration: underline; text-decoration-color:red">Subrayado y en rojo</li>
-		<li style="text-decoration: line-through; text-decoration-color:green">Subrayado y en verde</li>
-		<li style="text-decoration: underline; text-decoration-style:wavy">Subrayado debajo ondulado</li>
-		<li style="text-decoration: underline red dotted">Subrayado debajo con puntos y rojo</li>
-	</ul>
-	</dd>
+	<dl>
 	
-	<dt>Text-indent</dt>
-	<dd>Sangra la primera línea de un bloque de texto. 
-		<br>A partir de la segunda línea, el texto aparece sin sangrar. 
-		<br>Los valores admitidos son unidades de longitud. 
-		<br>Podemos indicar un valor negativo con lo que la sangría es hacia la izquierda.
-
-		<p style="text-indent:+2em">Esto es la primera línea sangrado +2em la segunda ya no sangra
-			<br>Esta es la segunda línea ya no debería sangrar. 
-		</p>
-		<p style="text-indent:-2em">Esto es la primera línea sangrado -2em la segunda ya no sangra
-			<br>Esta es la segunda línea ya no debería sangrar. 
-		</p>
-	</dd>
+		<dt>Color</dt>
+		<dd>Permite definir el color del texto.
+			<ul>
+				<li style="color:red">Este texto es de color rojo</li>
+				<li style="color:yellow">Este texto es de color amarillo</li>
+				<li style="color:green">Este texto es de color verde</li>
+			</ul>
+		</dd>
+		
+		<dt>Text-decoration</dt>
+		<dd>Permite decorar el texto
+		<br>por ejemplo, que aparezca subrayado o con una línea en la parte superior
+		<ul>
+			<li style="text-decoration: none">none: sin subrayado, muy útil para eliminar el subrayado por defecto en los enlaces</li>
+			<li style="text-decoration: underline">underline: subrayado debajo</li>
+			<li></li>
+			<li style="text-decoration: overline">overline: subrayado encima</li>
+			<li style="text-decoration: line-through">line-through: tachado</li>
+			<li style="text-decoration: underline; text-decoration-color:red">Subrayado y en rojo</li>
+			<li style="text-decoration: line-through; text-decoration-color:green">Subrayado y en verde</li>
+			<li style="text-decoration: underline; text-decoration-style:wavy">Subrayado debajo ondulado</li>
+			<li style="text-decoration: underline red dotted">Subrayado debajo con puntos y rojo</li>
+		</ul>
+		</dd>
+		
+		<dt>Text-indent</dt>
+		<dd>Sangra la primera línea de un bloque de texto. 
+			<br>A partir de la segunda línea, el texto aparece sin sangrar. 
+			<br>Los valores admitidos son unidades de longitud. 
+			<br>Podemos indicar un valor negativo con lo que la sangría es hacia la izquierda.
 	
-	<dt>Text-transform</dt>
-	<dd>Permite cambiar el texto a mayúsculas o minúsculas. 
-		<br>Puede inicializarse con alguno de los siguientes valores: 
-		<ul>
-			<li style="text-transform: capitalize">capitalize: Dispone en mayúsculas el primer carácter de cada palabra</li>
-			<li style="text-transform: lowercase">lowercase: CONVIERTE EN MINúCULAS TODO EL TEXTO</li>
-			<li style="text-transform: uppercase">upercase: convierte en mayúsculas todo el texto</li>
-			<li style="text-transform: none">none: no provoca cambios en el texto</li>
-		</ul>
-	</dd>
+			<p style="text-indent:+2em">Esto es la primera línea sangrado +2em la segunda ya no sangra
+				<br>Esta es la segunda línea ya no debería sangrar. 
+			</p>
+			<p style="text-indent:-2em">Esto es la primera línea sangrado -2em la segunda ya no sangra
+				<br>Esta es la segunda línea ya no debería sangrar. 
+			</p>
+		</dd>
+		
+		<dt>Text-transform</dt>
+		<dd>Permite cambiar el texto a mayúsculas o minúsculas. 
+			<br>Puede inicializarse con alguno de los siguientes valores: 
+			<ul>
+				<li style="text-transform: capitalize">capitalize: Dispone en mayúsculas el primer carácter de cada palabra</li>
+				<li style="text-transform: lowercase">lowercase: CONVIERTE EN MINúCULAS TODO EL TEXTO</li>
+				<li style="text-transform: uppercase">upercase: convierte en mayúsculas todo el texto</li>
+				<li style="text-transform: none">none: no provoca cambios en el texto</li>
+			</ul>
+		</dd>
+		
+		<dt>Letter-spacing</dt>
+		<dd>Indica el espacio que debe haber entre los caracteres del texto 
+			<br>utiliza unidades de longitud (puntos, pixeles, cm, em...)  
+			<ul>
+				<li style="letter-spacing: +3px">Aquí letter-spacing es +3px y abajo es -3px</li>
+				<li style="letter-spacing: -3px">Aquí letter-spacing es -3px</li>
+			</ul>
+		</dd>
+		
+		<dt>Word-spacing</dt>
+		<dd>Indica el espacio que debe haber entre las palabras del texto 
+			<br>utiliza unidades de longitud (puntos, pixeles, cm, em...)  
+			<ul>
+				<li style="word-spacing: 3px">Aquí word-spacing es +3px</li>
+				<li style="word-spacing: -3px">Aquí word-spacing es -3px</li>
+			</ul>
+		</dd>
 	
-	<dt>Letter-spacing</dt>
-	<dd>Indica el espacio que debe haber entre los caracteres del texto 
-		<br>utiliza unidades de longitud (puntos, pixeles, cm, em...)  
-		<ul>
-			<li style="letter-spacing: +3px">Aquí letter-spacing es +3px y abajo es -3px</li>
-			<li style="letter-spacing: -3px">Aquí letter-spacing es -3px</li>
-		</ul>
-	</dd>
+		<dt>Text-align</dt>
+		<dd>Alineación horizontal del texto. 
+			<br>Puede ser: left (izquierda), right (derecha), center (centrada) o justify (justificada a derecha e izquierda).
+			<ul>
+				<li style="text-align: left">left: Aquí el texto está alineado a la izda.</li>
+				<li style="text-align: right">right: Aquí el texto está alineado a la decha.</li>
+				<li style="text-align: center">center: Aquí el texto está alineado al centro.</li>
+				<li style="text-align: justify">justify: Aquí el texto está justificado.</li>
+			</ul>
+		</dd>
+		
+		<dt>Text-shadow</dt>
+		<dd>Permite colocar una sombra al texto para darle efecto de volumen. 
+			<br>Tiene esta sintaxis: <i>text-shadow: color distanciaX distanciaY desenfoque;</i>
+			<ul>
+				<li>distanciaX: Es el desplazamiento horizontal que tendrá la sombra (puede ser positivo o negativo)</li>
+				<li>distanciaY: Es el desplazamiento vertical que tendrá la sombra (puede ser positivo o negativo)</li>
+				<li>desenfoque: Es opcional e indica cuánto se va a desenfocar la sombra. 
+					Se indica una cantidad que cuanto mayor sea, más desenfocará el fondo.</li>
+				<li>color: Es el color de la sombra.</li>
+				<li style="text-shadow: 2px 2px 5px red">Ejemplo 2px 2px 5px red</li>
+			</ul>
+		</dd>
 	
-	<dt>Word-spacing</dt>
-	<dd>Indica el espacio que debe haber entre las palabras del texto 
-		<br>utiliza unidades de longitud (puntos, pixeles, cm, em...)  
-		<ul>
-			<li style="word-spacing: 3px">Aquí word-spacing es +3px</li>
-			<li style="word-spacing: -3px">Aquí word-spacing es -3px</li>
-		</ul>
-	</dd>
-
-	<dt>Text-align</dt>
-	<dd>Alineación horizontal del texto. 
-		<br>Puede ser: left (izquierda), right (derecha), center (centrada) o justify (justificada a derecha e izquierda).
-		<ul>
-			<li style="text-align: left">left: Aquí el texto está alineado a la izda.</li>
-			<li style="text-align: right">right: Aquí el texto está alineado a la decha.</li>
-			<li style="text-align: center">center: Aquí el texto está alineado al centro.</li>
-			<li style="text-align: justify">justify: Aquí el texto está justificado.</li>
-		</ul>
-	</dd>
+	</dl>
 	
-	<dt>Text-shadow</dt>
-	<dd>Permite colocar una sombra al texto para darle efecto de volumen. 
-		<br>Tiene esta sintaxis: <i>text-shadow: color distanciaX distanciaY desenfoque;</i>
-		<ul>
-			<li>distanciaX: Es el desplazamiento horizontal que tendrá la sombra (puede ser positivo o negativo)</li>
-			<li>distanciaY: Es el desplazamiento vertical que tendrá la sombra (puede ser positivo o negativo)</li>
-			<li>desenfoque: Es opcional e indica cuánto se va a desenfocar la sombra. 
-				Se indica una cantidad que cuanto mayor sea, más desenfocará el fondo.</li>
-			<li>color: Es el color de la sombra.</li>
-			<li style="text-shadow: 2px 2px 5px red">Ejemplo 2px 2px 5px red</li>
-		</ul>
-	</dd>
-
-</dl>
+	<hr>
+	<p>&copy; CESUR, 2024-2025</p>
+	
 </body>
 </html>
