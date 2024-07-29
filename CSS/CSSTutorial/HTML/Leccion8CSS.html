@@ -1,59 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Lección 8; Propiedades de los Fondos</title>
-
-	<style type="text/css">
-
-		body {
-				background-image: url("../PICS/Green-leaft.jpg"); /* Fichero de fondo */
-				background-repeat: no-repeat; /* No se repite, imagen sólo una vez */
-				background-position: top right; /* Arriba a la derecha*/
-				background-attachment: fixed; /* No se desplaza con la pagina*/
-		}	
-		
-		div {
-				border: 1px solid black;
-				padding: 10px;
-				width: 200px;
-				height: 100px;
-				text-align: justify;
-		}
-		
-	</style>
-
-</head>
-<body>
-
-<h1>Propiedades de los Fondos</h1>
-
-<dl>
-
-	<dt>Color de fondo (background-color)</dt>
-	<dd>
-		<p>La propiedad "background-color" permite establecer un color de fondo al elemento al que se aplique la propiedad. 
-		<br>Si se aplica al elemento body, toda la página tendrá ese color de fondo; 
-		<br>aplicado a otro elemento, como p, dicho elemento tendrá como fondo el color aplicado.
-		<p style="background-color:black;color:white">Este párrafo tiene un fondo negro y un texto de color blanco</p>
-	</dd>
+	<head>
 	
-	<dt>Imagen de fondo</dt>
-	<dd>La propiedad <i>background-image</i> permite establecer una imagen de fondo. 
-		<br>Esta imagen se superpone al color de fondo si lo hay, de modo que si la imagen no se puede cargar, por ejemplo porque la ruta no es correcta, entonces aparece el color de fondo.
-		<br>Por defecto, la imagen de fondo se repite las veces necesarias, creando un mosaico, tanto en horizontal como en vertical, hasta que se rellena el elemento.
-		<p>
-		<div style="background-image: url('../PICS/BackgroundPaper.jpg')">Este texti está dentro de un div para probar el tag de fondo</div>
-		<br>La propiedad <i>background-attachment</i> permite definir que el fondo quede fijo
-	 	<ul>
-	 		<li>scroll. Valor por defecto. El fondo y el texto se mueven juntos cuando el usuario se desplaza por la página</li>
-	 		<li>fixed. El fondo es fijo y solo se mueve el texto.</li>
-	 	</ul>
-	</dd>
-	<dt>
+		<title>Lección 8; Propiedades de los Fondos</title>
+	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<style type="text/css">
+			body {
+					background-color: #d3d3d3; /* Gris claro */
+					background-image: url("../PICS/Green-leaft.gif"); /* Imagen de fondo */
+					background-repeat: no-repeat; /* No se repite, imagen sólo una vez */
+					background-position: top right; /* Arriba a la derecha*/
+					background-attachment: fixed; /* No se desplaza con la página*/
+			}	
+			div {
+					border: 1px solid black;
+					padding: 10px;
+					width: 200px;
+					height: 100px;
+					text-align: justify;
+			}
+		</style>
+	
+	</head>
+	<body>
+	
+	<h1>Propiedades de los Fondos</h1>
+	
+	<dl>
+	
+		<dt>Color de fondo (background-color / Opacity - Transparency)</dt>
+		<dd>
+			<p>La propiedad "background-color" permite establecer un color de fondo al elemento al que se aplique la propiedad.<br>
+			Si se aplica al elemento body, toda la página tendrá ese color de fondo;<br>
+			aplicado a otro elemento, por ejemplo un &lt;p&gt;, el elemento tendrá como fondo el color aplicado.<br>
+			Recordar que el color se puede especificar en nombre "red", valor exadecimal "#ffffbc", o en RGB "rgb(255,0,0)"<br>
+			También se puede aplicar una "opacity" especificando una opacidad/transparencia al elemento<br>
+			El valor "opacity" puede ser desde 0.0 o completamente transparente, a 1.0 completamente opaco<br>
+			Este valor se puede modificar con JavaScript generando un efecto interesante</p>
+			<pre>
+&lt;p style="background-color:black;color:white"&gt;Este párrafo tiene un fondo negro y un texto de color blanco&lt;/p&gt;
+&lt;h1 style="background-color:green;opacity:0.1"&gt;opacity=0.1&lt;/h1&gt;
+&lt;h1 style="background-color:green;opacity:0.6"&gt;opacity=0.6&lt;/h1&gt;
+&lt;h1 style="background-color:green;opacity:1.0"&gt;opacity=1.0 (default value)&lt;/h1&gt;
+			</pre>
+			<p style="background-color:black;color:white">Este párrafo tiene un fondo negro y un texto de color blanco</p>
+			<h1 style="background-color:green;opacity:0.1">opacity=0.1</h1>
+			<h1 style="background-color:green;opacity:0.6">opacity=0.6</h1>
+			<h1 style="background-color:green;opacity:1.0">opacity=1.0 (default value)</h1>
+			<p>Se observa que la opacidad también se aplica a todos los elementos denttro del tag, incluído el texto<br>
+			Se puede evitar este efecto, aplicando solamente opacidad al fond, mediante el uso de la codificación RGB(red,green,blue,opacity)</p>
+			<pre>
+&lt;h1 style="background-color:rgb(0,255,0,0.3)"&gt;opacity=0.3&lt;/h1&gt;
+			</pre>
+			<h1 style="background-color:rgb(0,255,0,0.3)">opacity=0.3</h1>
+		</dd>
 		
-</dl>
-</body>
+		
+		<dt>Imagen de fondo</dt>
+		<dd>
+			<p>La propiedad "background-image" permite establecer una imagen de fondo.<br>
+			Esta imagen se superpone al color de fondo si lo hay, de modo que si la imagen no se puede cargar, por ejemplo porque la ruta no es correcta, entonces aparece el color de fondo.<br>
+			Por defecto, la imagen de fondo se repite las veces necesarias, creando un mosaico, tanto en horizontal como en vertical, hasta que se rellena el elemento.</p>
+<pre>
+&lt;div style="background-image: url('../PICS/BackgroundPaper.jpg')"&gt;Este texto está dentro de un div para probar el tag de fondo&lt;/div&gt;
+</pre>
+			<div style="background-image: url('../PICS/BackgroundPaper.jpg')">Este texto está dentro de un div para probar el tag de fondo</div>
+			<p>La propiedad "background-repeat" repite la imagen en horizonal o vertical, o se elimina su repetición para que haya una sola</p>
+			<ul>
+		 		<li>repeat-x / repeat-y. Repetición de la imagen en eje-X / eje-Y</li>
+		 		<li>no-repeat. Solamente e muestra la imagen una vez.</li>
+		 	</ul>
+			<p>La propiedad "background-position" permite especificar la posición de la imagen</p>
+			<p>La propiedad "background-attachment" permite especificar si la imagen es fija o se debe desplazar con el scroll de pantalla</p>
+		 	<ul>
+		 		<li>scroll. Valor por defecto. El fondo y el texto se mueven juntos cuando el usuario se desplaza por la página</li>
+		 		<li>fixed. El fondo es fijo y solo se mueve el texto.</li>
+		 	</ul>
+		 	<p>Ejemplo de todo lo anterior:</p>
+			<pre>
+&lt;style type="text/css"&gt;
+	body {
+		background-color: #d3d3d3; /* Gris claro */
+		background-image: url("../PICS/Green-leaft.gif"); /* Imagen de fondo */
+		background-repeat: no-repeat; /* No se repite, imagen sólo una vez */
+		background-position: top right; /* Arriba a la derecha*/
+		background-attachment: fixed; /* No se desplaza con la página*/
+	}	
+&lt;/style&gt;
+			</pre>
+		 	<p>Se puede resumir todos los parámetros anteriores en una única propiedad "background"<br>
+		 	"background: #ffffff url("img_tree.png") no-repeat right top;"
+
+		</dd>
+		<dt>
+			
+	</dl>
+	
+	<hr>
+	<p>&copy; CESUR, 2024-2025</p>
+	
+	
+	</body>
 </html>
