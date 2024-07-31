@@ -57,14 +57,15 @@
 	
 	<dl>
 	
-		<dt>Composición de la Caja</dt>
+		<dt>Composición de la Caja o Box Model</dt>
 		<dd>
 			<ul>
-				<li><span style="font-weight:bold">Content:</span> En el centro del bloque está el Contenido o <span style="font-style:italic">Content</span>. Es La informació que se visualiza. En el gráfico se identifica como "Content".</li>
+				<li><span style="font-weight:bold">Content:</span> En el centro del bloque está el Contenido o <span style="font-style:italic">Content</span>. Es La informació que se visualiza, básicamente texto e imágenes. En el gráfico se identifica como "Content".</li>
 				<li><span style="font-weight:bold">Padding:</span> Alrededor del Contenido existe un área denominada <span style="font-style:italic">Padding</span>, o relleno, que se extiende hasta el Border. En el gráfico es el área de color verde alrededor del contenido.</li>
 				<li><span style="font-weight:bold">Border:</span> El <span style="font-style:italic">Border</span> es la línea que separa el Content y su área de Padding de los márgenes. En el gráfico es el borde de color amarillo.</li>
 				<li><span style="font-weight:bold">Margin:</span> El Márgen o <span style="font-style:italic">Margin</span> es el espacio entre el Border del bloque, y el Border de otros bloques, los Margin se situan fueran de los Border y son la parte más externa del bloque.</li>
-				<li>Los <span style="font-weight:bold">Padding, Border y Maring</span>, pueden tener un ancho, o valor, de 0, en cuyo caso no se visualizan. El ancho de los Padding, Border y Margin pueden ser diferente en cada lado del bloque para un mismo bloque.</li>
+				<li>El Box Model nos permite definir las características (mayormente el grosor) del <span style="font-weight:bold">Padding, Border y Maring</span>, permitiendo definir el espacio entre los elementos de una página. El ancho de los Padding, Border (también la forma y color) y Margin pueden ser diferente en cada lado del bloque para un mismo bloque.</li>
+				<li>Cuando definimos las propiedades (width &amp; height) con CSS, se aplican únicamente al Content. Para calcular el total de width &amp; height de hay que tener en cuenta todos los elementos; Padding, Border y Margin</li>
 			</ul>
 			<p>Modelo visual de Bloque o Caja:</p>
 			<img src="../PICS/CSSBoxModel.png">
@@ -88,7 +89,7 @@
 						<li>thin: borde fino.</li>
 						<li>medium: borde de grosor medio</li>
 						<li>thick: borde grueso</li>
-						<li>También pueden usarse porcentajes o indicar unidades de medida</li>
+						<li>También pueden usarse porcentajes o indicar unidades de medida (px, pt, cm, em, etc.)</li>
 					</ul>
 				</li>
 				<li>Border Style (estilo del borde) los posibles valores son:
@@ -101,6 +102,8 @@
 						<li>ridge: borde 3D con efecto de elevación</li>
 						<li>inset: efecto 3D </li>
 						<li>outset: efecto 3D</li> 
+						<li>hidden: Oculto</li>
+						<li>none: Sin borde</li>
 					</ul>			
 				</li> 
 			</ul>
@@ -113,7 +116,8 @@
 				<li>border-left: Permite indicar a la vez las tres propiedades del borde izquierdo</li>
 				<li>border-bottom: Permite indicar a la vez las tres propiedades del borde inferior</li>			
 			</ul>
-			<p>Finalmente, con "border" se puede indicar la propiedad de manera abreviada para los cuatro bordes</p>
+			<p>Finalmente, con "border : width style(required) color" se puede indicar la propiedad de manera abreviada para los cuatro bordes<br>
+				</p>
 			<p>Veamos algunos ejemplos:</p>
 			<pre>
 &lt;style type="text/css"&gt;
@@ -227,7 +231,6 @@ div.border_4 {
 	
 	<hr>
 	<p>&copy; CESUR, 2024-2025</p>
-	
 	
 </body>
 </html>

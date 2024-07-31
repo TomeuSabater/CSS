@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
 
+	<title>Lección 11; Propiedades Relacionadas con las Listas</title>
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Lección 11; Propiedades Relacionadas con las Listas</title>
 
 	<style type="text/css">
 
@@ -27,19 +28,130 @@
 		ul.inside {list-style-position:inside}
 
 		ul.list-style {list-style: square inside}
+		
+		ul.navbar {
+  			list-style-type: none; /*  Removes the bullets. A navigation bar does not need list markers */ 
+  			margin: 0; /*  to remove browser default settings */ 
+  			padding: 0; /* to remove browser default settings*/
+		}
+		
+		li a.navbar {
+  			display: block;
+  			width: 60px;
+  			background-color: #dddddd;
+		}
+				
+		ul.navbar2 {
+  			list-style-type: none;
+  			margin: 0;
+  			padding: 0;
+  			width: 200px;
+  			background-color: #f1f1f1;
+		}
+
+		li a.navbar2 {
+  			display: block;
+  			color: #000;
+  			padding: 8px 16px;
+  			text-decoration: none;
+		}
+		
+		li a.active2 {
+			display: block;
+			background-color: #04AA6D;
+			color: white;
+			padding: 8px 16px;
+			text-decoration: none;
+		}
+
+		/* Change the link color on hover */
+		li a.navbar2:hover {
+  			background-color: #555;
+  			color: white;
+		}
+		
+				
+		ul.navbar3 {
+  			list-style-type: none;
+  			margin: 0;
+  			padding: 0;
+  			width: 200px;
+  			background-color: #f1f1f1;
+  			border: 1px solid #555;
+		}
+
+		li a.navbar3 {
+  			display: block;
+  			color: #000;
+  			padding: 8px 16px;
+  			text-decoration: none;
+  			text-align: center; 
+  			border-bottom: 1px solid #555;
+		}
+		
+		
+		li a.active3 {
+			display: block;
+			background-color: #04AA6D;
+			color: white;
+			padding: 8px 16px;
+			text-decoration: none;
+			text-align: center; 
+			border-bottom: 1px solid #555;
+		}
+		
+		#navbar3 {
+  			border-bottom: none;
+		}
+
+		/* Change the link color on hover */
+		li a.navbar3:hover {
+  			background-color: #555;
+  			color: white;
+		}
 
 	</style>
 
 </head>
 <body>
 
-<H2>Propiedades Relacionadas con las Listas</H2>
-
-<dl>
-	<dt>list-style-type</dt>
-	<dd>Permite especificar el tipo de elemento de numeración de la lista
-		<br>Es recomendable que las &lt;ol&gt; muestren valores numerados
-		<br>y que las &lt;ul&gt; muestre valores no numerados
+	<H1>Propiedades Relacionadas con las Listas</H1>
+	
+	<p>Se muestran, a modo de ejemplo, las posibilidades del CSS con los elementos HTML para crear listas</p>
+	
+	<h2>List Style</h2>
+	
+	
+	<dl>
+		<dt>list-style-type</dt>
+		<dd>
+			<p>Permite especificar el tipo de elemento de numeración de la lista<br>
+			Es recomendable que las &lt;ol&gt; muestren valores numerados<br>
+			y que las &lt;ul&gt; muestre valores no numerados<br>
+			Ejemplo:</p>
+			<pre>
+	&lt;style type="text/css"&gt;
+		ol.armenian {list-style-type:armenian}
+		ol.decimal {list-style-type:decimal}
+		ol.decimal-leading-zero {list-style-type:decimal-leading-zero}
+		ol.upper-roman {list-style-type:upper-roman}
+		ol.lower-roman {list-style-type:lower-roman}
+		ol.upper-alpha {list-style-type:upper-alpha}
+		ol.lower-alpha {list-style-type:lower-alpha}
+		
+		ul.circle {list-style-type:circle}
+		ul.square {list-style-type:square}
+		ul.disc {list-style-type:disc}
+		ul.none {list-style-type:none}
+	&lt;/style&gt;
+	
+	&lt;ol class="armenian"&gt;
+		&lt;li&gt;Esto&lt;/li&gt;
+		&lt;li&gt;es&lt;/li&gt;
+		&lt;li&gt;armenian&lt;/li&gt;
+	&lt;/ol&gt;
+			</pre>
+			
 			<ol class="armenian">
 				<li>Esto</li>
 				<li>es</li>
@@ -96,46 +208,286 @@
 				<li>es</li>
 				<li>none</li>
 			</ul>
-	</dd>
-	
-	<dt>list-style-image</dt>
-	<dd>Permite especificar una imagen para encabezar los elementos de la lista
-		<br>La imagen debe ser de alguno de los formatos habituales (gif, jpg, jpeg, etc.)
-		<br>Tener en cuenta el tamaño de la imagen
-		<br>Ejemplo
+		</dd>
+			
+		<dt>list-style-image</dt>
+		<dd>
+			<p>Permite especificar una imagen para encabezar los elementos de la lista<br>
+			La imagen debe ser de alguno de los formatos habituales (gif, jpg, jpeg, etc.) y tener en cuenta el tamaño de la imagen<br>
+			Ejemplo</p>
+			<pre>
+	&lt;style type="text/css"&gt;
+		ul.list-style-image {list-style-image:url("../PICS/sqpurple.gif")}		
+	&lt;/style&gt;	
+			</pre>
+			<ul class="list-style-image">
+				<li>Esto</li>
+				<li>es</li>
+				<li>list-style-image</li>
+			</ul>
+		</dd>
 		
-		<ul class="list-style-image">
-			<li>Esto</li>
-			<li>es</li>
-			<li>list-style-image</li>
-		</ul>
-	</dd>
+		<dt>list-style-position</dt>
+		<dd>
+			<p>Permite especificar si los adornos están alineados con el texto o no</p>
+			<pre>
+	&lt;style type="text/css"&gt;	
+		ul.outside {list-style-position:outside}
+		ul.inside {list-style-position:inside}
+	&lt;/style&gt;			
+			</pre>
+			<ul class="outside">
+				<li>Esto</li>
+				<li>es</li>
+				<li>outside</li>
+			</ul>
+			<ul class="inside">
+				<li>Esto</li>
+				<li>es</li>
+				<li>inside</li>
+			</ul>
+		</dd>
+		
+		<dt>list-style</dt>
+		<dd>
+			<p> Permite con un solo tag especificar varios propiedades</p>
+			<pre>
+&lt;style type="text/css"&gt;	
+	ul.list-style {list-style: square inside}
+&lt;/style&gt;		
+			</pre>
+			<ul class="list-style">
+				<li>Esto</li>
+				<li>es</li>
+				<li>list-style</li>
+			</ul>
+		</dd>
 	
-	<dt>list-style-position</dt>
-	<dd>Permite especificar si los adornos están alineados con el texto o no
-		<ul class="outside">
-			<li>Esto</li>
-			<li>es</li>
-			<li>outside</li>
-		</ul>
-		<ul class="inside">
-			<li>Esto</li>
-			<li>es</li>
-			<li>inside</li>
-		</ul>
-	</dd>
-	
-	<dt>list-style</dt>
-	<dd>Permite con un solo tag especificar varios propiedades
-	<br>Ejemplo
-		<ul class="list-style">
-			<li>Esto</li>
-			<li>es</li>
-			<li>list-style</li>
-		</ul>
-	</dd>
+	</dl>
 
-</dl>
+	<h2>Navigation Bar</h2>
+	<p>
+		A navigation bar needs standard HTML as a base.<br>
+		In our examples we will build the navigation bar from a standard HTML list.<br>
+		A navigation bar is basically a list of links, so using the &lt;ul&gt; and &lt;li&gt; elements makes perfect sense:
+	</p>
+	
+	<h3>STEP 1</h3>
+	
+	<p>construiremos la Nav Bar paso a paso<br>
+	comenzamos mediante una lista no numerada sin ningún tipo de formato:</p>
+	<pre>
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="default.asp"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="news.asp"&gt;News&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="contact.asp"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.asp"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;	
+	</pre>
+	
+	<ul>
+	  <li><a href="default.asp">Home</a></li>
+	  <li><a href="news.asp">News</a></li>
+	  <li><a href="contact.asp">Contact</a></li>
+	  <li><a href="about.asp">About</a></li>
+	</ul>
+
+	<h3>STEP 2</h3>
+	<p>Siguiente paso será remover los "bullets", el "margin" y el ""padding" de la lista<p>
+
+	<pre>
+&lt;style type="text/css"&gt;
+	ul.navbar {
+		list-style-type: none; 
+		margin: 0; 
+		padding: 0; 
+	}
+&lt;/style&gt;	
+	
+&lt;ul class="navbar"&gt;
+  &lt;li&gt;&lt;a href="default.asp"&gt;Home&lt;/a&gt;&lt;/li&gt; 
+  &lt;li&gt;&lt;a href="news.asp"&gt;News&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="contact.asp"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.asp"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;	
+	</pre>
+	<ul class="navbar">
+	  <li><a href="default.asp">Home</a></li>
+	  <li><a href="news.asp">News</a></li>
+	  <li><a href="contact.asp">Contact</a></li>
+	  <li><a href="about.asp">About</a></li>
+	</ul>
+	
+	<p>"list-style-type: none;" - Removes the bullets. A navigation bar does not need list markers
+	<br>Set "margin: 0;" and "padding: 0;" to remove browser default settings</p>
+	
+	
+	<h3>STEP 3</h3>
+	
+	<h3>CSS Vertical Navigation Bar</h3>
+	
+	<p>To build a Vertical Navigation Bar, you can style the &lt;a&gt; elements inside the list, in addition to the code from the previous steps</p>
+	<pre>
+&lt;style type="text/css"&gt;
+
+	ul.navbar {
+  		list-style-type: none; 
+  		margin: 0; 
+  		padding: 0; 
+	}
+
+	li a.navbar {
+		display: block;
+		width: 60px;
+		background-color: #dddddd;
+	}
+	
+&lt;/style&gt;
+
+&lt;ul class="navbar"&gt;
+  &lt;li&gt;&lt;a class="navbar" href="default.asp"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="navbar" href="news.asp"&gt;News&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="navbar" href="contact.asp"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="navbar" href="about.asp"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+	</pre>
+		
+	<ul class="navbar">
+	  <li><a class="navbar" href="default.asp">Home</a></li>
+	  <li><a class="navbar" href="news.asp">News</a></li>
+	  <li><a class="navbar" href="contact.asp">Contact</a></li>
+	  <li><a class="navbar" href="about.asp">About</a></li>
+	</ul>
+	
+	<p>A background color is added to the links to show the link area.<br>
+	Notice that the whole link area is clickable, not just the text.</p>
+	
+	<p>"display: block;" - Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify the width (and padding, margin, height, etc. if you want)<br>
+	"width: 60px;" - Block elements take up the full width available by default. We want to specify a 60 pixels width</p>
+	
+	
+	<h3>STEP 4</h3>
+	
+	<p>You can also set the width of &lt;ul&gt;, and remove the width of &lt;a&gt; as they will take up the full width available when displayed as block elements.<br> 
+	This will produce the same result as our previous example</p>
+	
+	<p>We will create a basic Vertical Navigation Bar with a gray background color and change the background color of the links when the user moves the mouse over them<p>
+	<p>In this example, we also create an "active" class with a green background color and a white text. This class is added to the "News" link.<br>
+	This could be the page you're, so you have the Navigation Bar, and the Active Page when you are located</p>
+	
+	<pre>
+&lt;style type="text/css"&gt;
+
+ul.navbar2 {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: #f1f1f1;
+}
+
+li a.navbar2 {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+li a.active {
+	display: block;
+	background-color: #04AA6D;
+	color: white;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a.navbar2:hover {
+	background-color: #555;
+	color: white;
+}
+	
+&lt;ul class="navbar2"&gt;
+	&lt;li&gt;&lt;a class="navbar2" href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a class="active" href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a class="navbar2" href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a class="navbar2" href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+	
+&lt;/style&gt;
+	</pre>
+
+	<ul class="navbar2">
+  		<li><a class="navbar2" href="#home">Home</a></li>
+  		<li><a class="active2" href="#news">News</a></li>
+  		<li><a class="navbar2" href="#contact">Contact</a></li>
+  		<li><a class="navbar2" href="#about">About</a></li>
+	</ul>
+	
+	<h3>STEP 5</h3>
+	<p>In this example, we will apply some refinement. We center the navigation links and add a border to the navigation bar.</p>
+	<pre>
+&lt;style type="text/css"&gt;	
+ul.navbar3 {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: #f1f1f1;
+	border: 1px solid #555;
+}
+
+li a.navbar3 {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-align: center; 
+	border-bottom: 1px solid #555;
+}
+
+
+li a.active3 {
+	display: block;
+	background-color: #04AA6D;
+	color: white;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-align: center; 
+	border-bottom: 1px solid #555;
+}
+
+#navbar3 {
+	border-bottom: none;
+}
+
+/* Change the link color on hover */
+li a.navbar3:hover {
+	background-color: #555;
+	color: white;
+}
+	
+&lt;ul class="navbar3"&gt;
+	&lt;li&gt;&lt;a class="navbar3" href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a class="active3" href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a class="navbar3" href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a class="navbar3" id="navbar3" href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/style&gt;
+	</pre>
+	
+	<ul class="navbar3">
+  		<li><a class="navbar3" href="#home">Home</a></li>
+  		<li><a class="active3" href="#news">News</a></li>
+  		<li><a class="navbar3" href="#contact">Contact</a></li>
+  		<li><a class="navbar3" id="navbar3" href="#about">About</a></li>
+	</ul>
+	
+	<p>Add text-align:center to &lt;li&gt; or &lt;a&gt; to center the links.<br>
+	Add the border property to &lt;ul&gt; add a border around the navbar. If you also want borders inside the navbar, add a border-bottom to all &lt;li&gt; elements, except for the last one</p>
+	
+	<hr>
+	<p>&copy; CESUR, 2024-2025</p>
 
 </body>
 </html>

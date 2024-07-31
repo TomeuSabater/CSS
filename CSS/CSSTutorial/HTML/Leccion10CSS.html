@@ -2,9 +2,11 @@
 <html lang="es">
 <head>
 
+	<title>Lección 9; Herencia de Estilo, Contexto Estilos, Pseudo Clases</title>
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Lección 9; Herencia de Propiedades de Estilo</title>
+
 
 	<style type="text/css">
 
@@ -12,58 +14,270 @@
 		li span {color:green}
 
 		li.clase1 {
-					color:white;
-					background-color:#D3D3D3
-				}
+			color:white;
+			background-color:#D3D3D3
+		}
 		
 		li.clase2 {
-					color:white;
-					background-color:#000000 
-				}
+			color:white;
+			background-color:#000000 
+		}
+				
+		a:link {
+			text-decoration: none;
+			background-color: olive;
+			color:white;
+			font-weight: bold;
+			padding: 5px;
+			border-bottom: 3px solid black;
+			border-top: 3px solid black;
+		}
+	
+		a:hover{
+				background-color: white;
+				color: black;
+		}
+	
+		a:active {background-color: green;}
+	
+		a:visited {
+			background-color: black;
+			color: white;
+		}
 		
+		h2 span:first-child {color:red;}
+
+		p.clase1:first-letter {
+			font: 150% Verdana;
+			color: red;
+		}
+
+		p.clase2:first-child {background-color: red;}
+		p.clase2:last-child {background-color: blue;}
+		p.clase2:nth-child(odd) {
+			letter-spacing:15px; 
+			color: yellow;
+		} 
+						
 	</style>
 
 </head>
 <body>
 
-<h2>Herencia de Propiedades de Estilo, Estilo en Función del Contexto y Clases de Estilo</h2>
-
-<dl>
-	<dt>Herencia de los estilos</dt>
-	<dd>Todas las Etiquetas contenidas "dentro" de otras etiquetas heredan los estilos.
-		<br> por ejemplo, si en &lt;body&gt; tenemos "background-color = red" todos los tag
-		<br> tendrán es mismo color de fondo, a no ser que lo redefinamos en cada tag. 
-		<br> Veamos un ejemplo con &lt;li&gt; conteniendo un &lt;span&gt;
-		<ul>
-			<li style="color:green">Verde como color de fondo excepto <span style="color:red">estas palabras en rojo</span></li>
-		</ul>
-	</dd>
-
-	<dt>Definición de un estilo en función del contexto</dt>
-	<dd>En CSS es posible definir un estilo para un tag HTML con la condición de que 
-		<br>este tag esté contenido dentro de otro. Es una manera de definir estilos para
-		<br>combinaciones de marcas. 
-		<br>Ejemplo
-		<ul>
-			<li>Este <span>li</span> es <span>rojo</span> pero solo cuando esté en combinación con &lt;span&gt; es <span>verde</span></li>
-		</ul>
-	</dd>
+	<h2>Herencia de Estilo, Estilo en Función del Contexto, Clases y Pseudo Clases de Estilos</h2>
 	
-	<dt>Defición de estilos mediante Clases</dt>
-	<dd>Hasta ahora, hemos visto como el estilo se aplica a un tag HTML
-		<br>Con el concepto de "Clase" podemos aplicar el estilo a varias marcas al mismo tiempo.
-		<br>Una Clase es una regla de estilo con un nombre. 
-		<br>La sintaxis es como sigue ".nombre_de_clase"
-		<br>Para luego aplicarlo dentro de la marca se especifica "class=nombre_de_clase"
-		<br>Ejemplo
-		<ul>
-			<li>Este li es color rojo</li>
-			<li class="clase1">Esto es li afectado por clase1</li>
-			<li class="clase2">Esto es li afectado por clase2</li>
-		</ul>
-	</dd>
-
-</dl>
+	<dl>
+		<dt>Herencia de los Estilos</dt>
+		<dd>
+			<p>Todas las Etiquetas contenidas "dentro" de otras etiquetas heredan los estilos.
+			<br> por ejemplo, si en &lt;body&gt; tenemos "background-color = red" todos los tag
+			<br> tendrán es mismo color de fondo, a no ser que lo redefinamos en cada tag. 
+			<br> Veamos un ejemplo con &lt;li&gt; conteniendo un &lt;span&gt;</p>
+			<pre>
+	&lt;li style="color:green"&gt;Verde como color de fondo excepto &lt;span style="color:red"&gt;estas palabras en rojo&lt;/span&gt;&lt;/li&gt;
+			</pre>
+			<ul>
+				<li style="color:green">Verde como color de fondo excepto <span style="color:red">estas palabras en rojo</span></li>
+			</ul>
+		</dd>
+	
+	
+		<dt>Definición de un Estilo en Función del Contexto</dt>
+		<dd>
+			<p>En CSS es posible definir un estilo para un tag HTML con la condición de que 
+			<br>este tag esté contenido dentro de otro. Es una manera de definir estilos solo cuando ocurre una combinaciones de marcas. 
+			<br>Ejemplo:</p>
+			<pre>
+	&lt;style type="text/css"&gt;
+	
+		li  {color:red}	
+		li span {color:green}
+		&lt;/style&gt;
+		
+	&lt;li&gt;Este &lt;span&gt;li&lt;/span&gt; es &lt;span&gt;rojo&lt;/span&gt; pero solo cuando esté en combinación con &lt;span&gt; es &lt;span&gt;verde&lt;/span&gt;&lt;/li&gt;
+			</pre>
+	
+			<ul>
+				<li>Este <span>li</span> es <span>rojo</span> pero solo cuando esté en combinación con &lt;span&gt; es <span>verde</span></li>
+			</ul>
+		</dd>
+		
+		
+		<dt>Defición de Estilos Mediante Clases (recordatorio)</dt>
+		<dd>
+			<p>Hasta ahora, hemos visto como el estilo se aplica a un tag HTML<br>
+			Con el concepto de "Class" podemos aplicar el estilo a varias marcas al mismo tiempo.<br>
+			Una ""Class"" es una regla de estilo con un nombre. La sintaxis es como sigue ".nombre_de_clase"<br>
+			 Para luego aplicarlo dentro de la marca se especifica "class=nombre_de_clase"<br>
+			 Ejemplo:</p>
+			 <pre>
+	&lt;style type="text/css"&gt;
+	
+		li  {color:red}	
+		
+		li.clase1 {
+				color:white;
+				background-color:#D3D3D3
+				}
+		
+		li.clase2 {
+				color:white;
+				background-color:#000000 
+				}
+						
+	&lt;li&gt;Este li es color rojo&lt;/li&gt;
+	&lt;li class="clase1"&gt;Esto es li afectado por clase1&lt;/li&gt;
+	&lt;li class="clase2"&gt;Esto es li afectado por clase2&lt;/li&gt;
+		
+	&lt;/style&gt;
+			 </pre>
+			<ul>
+				<li>Este li es color rojo</li>
+				<li class="clase1">Esto es li afectado por clase1</li>
+				<li class="clase2">Esto es li afectado por clase2</li>
+			</ul>
+		</dd>
+		
+	</dl>
+	
+	<h2>Pseudo Clases</h2>
+	<p>Las Pseudoclases son Clases Especiales que se definen añadiendo dos puntos antes de la pseudoclase concreta
+	<br>La sintaxis es la siguiente; etiqueta:pseudoclase{propiedad}
+	<br>Las más usadas son las que se usan con &lt;a&gt;
+	<br>Es importante saber que el orden en que se definen la pseudoclases es fundamental
+	<br>Orden: <strong>link-visited-hover-active</strong>
+	<br>Veamos las más importantes:</p>
+	
+	<dl>
+		<dt>:link</dt>
+			<dd>Enlace sin visitar</dd>
+		<dt>:visited</dt>
+			<dd>Enlace visitado</dd>
+		<dt>:hover</dt>
+			<dd>Enlace con el mouse sobre él</dd>
+		<dt>:active</dt>
+			<dd>Es la que tiene el foco en ese momento</dd>
+		<dt>:first-letter</dt>
+			<dd>Primera letra del texto</dd>
+		<dt>:first-line</dt>
+			<dd>Primera línea de texto</dd>
+		<dt>:first-child :last-child</dt>
+			<dd>Hace referencia al primer/último elemento de un tipo contenido dentro de otro.
+				<br>Es necesario que el tipo del primer/último elemento sea el indicado en la hoja de estilo
+				<br>Es decir, debe ser el primer/último hijo para que se aplique la propiedad.
+			</dd>
+		<dt>:nth-child(number)</dt>
+			<dd>Represente el elemento cuya posición sea = number
+				<br>:nth-child(3) Representa el tercer hijo</dd>
+		<dt>:nth-child(odd)</dt>
+			<dd>Representa elementos cuya posición numérica es impar; 1, 3, 5, etc</dd>
+		<dt>:nth-child(even)</dt>
+			<dd>Representa elementos cuya posición numérica es par: 2, 4, 6, etc</dd>
+		<dt>:nth-child(An+B)</dt>
+			<dd>Representa elementos cuya posición nunérica coincide con el patrón An+B, para cada entero positivo
+				<br>(5n) = 5*1 = 5, 5*2 = 10, 5*3 = 15, etc.
+				<br>(3n+4) = 3*0+4 = 4, 3*1+4 = 7, etc.
+			</dd>
+		
+		<dt>Ejemplos Clarificadores</dt>
+		<dd>
+			
+			<pre>
+	&lt;style type="text/css"&gt;	
+	
+		a:link {
+			text-decoration: none;
+			background-color: olive;
+			color:white;
+			font-weight: bold;
+			padding: 5px;
+			border-bottom: 3px solid black;
+			border-top: 3px solid black;
+		}
+		
+		a:hover{
+			background-color: white;
+			color: black;
+		}
+	
+		a:active {background-color: green;}
+	
+		a:visited {
+			background-color: black;
+			color: white;
+		}
+		
+	&lt;/style&gt;
+	
+	&lt;p&gt;&lt;a href="https://www.google.es"&gt;enlace a Google&lt;/a&gt;&lt;/p&gt;	
+	&lt;br&gt;
+	&lt;p&gt;&lt;a href="https://www.elmundo.es"&gt;enlace a Noticias&lt;/a&gt;
+			</pre>		
+			<p><a href="https://www.google.es">enlace a Google</a></p>	
+			<br>
+			<p><a href="https://www.elmundo.es">enlace a Noticias</a>
+				
+				
+			<pre>
+	&lt;style type="text/css"&gt;	
+		p.clase1:first-letter {
+			font: 150% Verdana;
+			color: red;
+		}
+	&lt;/style&gt;
+	
+	&lt;p class="clase1"&gt;La primera letra es capital y con otro estilo&lt;/p&gt;
+	&lt;p class="clase1"&gt;Aquí también lo es&lt;/p&gt;
+			</pre>		
+			<p class="clase1">La primera letra es capital y con otro estilo</p>
+			<p class="clase1">Aquí también lo es</p>
+				
+				
+			<pre>
+	&lt;style type="text/css"&gt;		
+			h2 span:first-child {color:red;}
+	&lt;/style&gt;
+	
+	&lt;h2&gt;Seguimos &lt;em&gt;con&lt;/em&gt; las &lt;span&gt;Pseudoclases&lt;/span&gt;&lt;/h2&gt;
+	&lt;h2&gt;En este caso sólo &lt;span&gt;vamos a cambiar&lt;/span&gt; las propiedades &lt;span&gt;del primer hijo&lt;/span&gt; &lt;/h2&gt;
+	&lt;h2&gt;Podemos ver que &lt;span&gt;sólo&lt;/span&gt; cambia la primera de &lt;span&gt;ellas&lt;/span&gt;
+	&lt;/h2&gt;
+			</pre>						
+			<h2>Seguimos <em>con</em> las <span>Pseudoclases</span></h2>
+			<h2>En este caso sólo <span>vamos a cambiar</span> las propiedades <span>del primer hijo</span>
+			</h2>
+			<h2>Podemos ver que <span>sólo</span> cambia la primera de <span>ellas</span>
+			</h2>
+				
+			<pre>
+	&lt;style type="text/css"&gt;		
+		
+			p.clase2:first-child {background-color: red;}
+			p.clase2:last-child {background-color: blue;}
+			p.clase2:nth-child(odd) {
+				letter-spacing:15px; 
+				color: yellow;
+			} 
+				
+	&lt;/h2&gt;
+	
+	&lt;p class="clase2"&gt;Esto es pimer párrafo&lt;/p&gt;
+	&lt;p class="clase2"&gt;Esto es segund párrafo&lt;/p&gt;
+	&lt;p class="clase2"&gt;Esto es tercero párrafo&lt;/p&gt;
+	&lt;p class="clase2"&gt;Esto es cuarto párrafo&lt;/p&gt;
+			</pre>
+			<div>
+				<p class="clase2">Esto es pimer párrafo</p>
+				<p class="clase2">Esto es segund párrafo</p>
+				<p class="clase2">Esto es tercero párrafo</p>
+				<p class="clase2">Esto es cuarto párrafo</p>
+			</div>
+				
+		</dd>
+	</dl>
+		
+	<hr>
+	<p>&copy; CESUR, 2024-2025</p>
 
 </body>
 </html>
