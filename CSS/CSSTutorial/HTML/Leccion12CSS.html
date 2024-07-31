@@ -1,27 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	
-	
+		
 	<title>Lección 12; Visualización de Elementos</title>
 	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<style type="text/css">
+	<style type="text/css">
+	
+		p.clase0 {
+			background-color: red;
+			color:white;
+		}
+	
+		p.clase1 {
+			display:inline; /* No admite ancho ni alto, agrega salto al final */
+			background-color: red; /* El color de fondo sólo ocupa el espacio del texto */
+			color:white;
+		} 
+	
+		h3.clase2 {
+			display: inline-block; /*Elemento de bloque pero va seguido */
+			height: 50px;
+			width: 30%;
+			padding-top: 20px;
+			background-color: olive;
+		}
+	
+		a.clase3 {
+			display: block; /*Es un elemento de línea convertido en bloque */
+			background-color: black;
+			width: 20%;
+			margin: 2px;
+			color:white;
+		}
+	
+	</style>
+
+</head>
+<body>
+	
+	<H2>Visualización de Elementos</H2>
+	
+	<p>The "display" property is the most important CSS property for controlling layout.<br>
+	The display property is used to specify how an element is shown on a web page.<br>
+	Every HTML element has a default display value, depending on what type of element it is.<br> 
+	The default display value for most elements is "block" or "inline."<br>
+	The display property is used to change the default display behavior of HTML elements.</p>
+	
+	<p>Algunos de los atributos más comunmente utilizados para Display (no todos) son los siguientes:</p>  
+	
+	<dl>
+		
+		<dt>Display: none</dt>
+		<dd>
+			<p>El elemento queda oculto (también sus subelementos)
+			<br>Es muy usado en JavaScript para hacer aparecer/desaparecer elementos cambiando este atributo "display:none;" / "display:block;"</p>
+		</dd>
+		
+		<dt>Display: inline</dt>
+	 	<dd>
+	 		<p>Los elementos se muestran sin romper la línea actual, de manera seguida o continuada<br>
+	 		permite colocar elementos de manera consecutiva, sin romper línea<br>
+	 		se ignoran los márgenes superior e inferior (margin) pero sí reconoce los rellenos (padding) y los márgenes superior e inferior, así como los bordes (border)<br>
+	 		No hace caso de widht y height, pero el elemento afectado toma tanto widht como necesite.<br>
+	 		Se aplica por defecto a los elementos: a, span, small, strong, em, mark, etc.</p>
+	 	</dd>
+	 	
+	 	<dt>Display: block</dt>
+	 	<dd>
+	 		<p>Los elementos que se muestran dentro de una caja rectangular.<br>
+	 		Rompen la línea actual y, por defecto, no adminte otro elemento a su lado, toma todo el width disponible<br>
+	 		Se aplica por defecto a los elementos: p, h1, h2, div, section, nav, figure, etc.</p>
+	 	</dd>
+	 	
+	 	<dt>Display: inline-block</dt>
+	 	<dd>
+	 		<p>El elemento forma un bloque rectangular, per es interior a su contenedor (no rompe línea)<br>
+	 		Sí admite elementos a su lado. Admite manipular width y heigh<br>
+	 		Ejemplos son button, image, input, textarea, select, etc.</p>
+	 	</dd>
+	 		 	
+	</dl>
+
+	 
+	 
+ 	<h2>Vamos a ver un ejemplo de todo lo anterior</h2>
+ 	
+  	<pre>
+	 	
+&lt;style type="text/css"&gt;
 
 	p.clase0 {
 		background-color: red;
 		color:white;
 	}
-
+	
 	p.clase1 {
 		display:inline; /* No admite ancho ni alto, agrega salto al final */
 		background-color: red; /* El color de fondo sólo ocupa el espacio del texto */
 		color:white;
 	} 
-
+	
 	h3.clase2 {
 		display: inline-block; /*Elemento de bloque pero va seguido */
 		height: 50px;
@@ -29,7 +111,7 @@
 		padding-top: 20px;
 		background-color: olive;
 	}
-
+	
 	a.clase3 {
 		display: block; /*Es un elemento de línea convertido en bloque */
 		background-color: black;
@@ -38,57 +120,51 @@
 		color:white;
 	}
 
-</style>
+	&lt;/style&gt;
+		 	
+	&lt;p class="clase0"&gt;Hola mundo&lt;/p&gt;
+	&lt;p class="clase0"&gt;Adiós mundo&lt;/p&gt;
+	&lt;p class="clase1"&gt;Hola Mundo&lt;/p&gt;
+	&lt;p class="clase1"&gt;Adiós Mundo&lt;/p&gt;
+	&lt;br&gt;
+	&lt;p class="clase0"&gt;Hola mundo&lt;/p&gt;
+	&lt;h3&gt;Ciclos formativos&lt;/h3&gt;
+	&lt;h3&gt;Diseño de Interfaces Web&lt;/h3&gt;
+	&lt;br&gt;
+	&lt;p class="clase1"&gt;Hola mundo&lt;/p&gt;
+	&lt;h3 class="clase2"&gt;Ciclos Formativos&lt;/h3&gt;
+	&lt;h3 class="clase2"&gt;Diseño de Interfaces Web&lt;/h3&gt;
+	&lt;br&gt;
+	&lt;a href="http://www.google.es"&gt;Google&lt;/a&gt;
+	&lt;a href="http://www.elmundo.es"&gt;Noticias&lt;/a&gt;
+	&lt;br&gt;
+	&lt;a  href="http://www.google.es" class="clase3"&gt;Google&lt;/a&gt;
+	&lt;a class="clase3" href="http://www.elmundo.es"&gt;Noticias&lt;/a&gt;
+	 	
+ 	</pre>
 
-</head>
-<body>
+	<p class="clase0">Hola mundo</p>
+	<p class="clase0">Adiós mundo</p>
+	<p class="clase1">Hola Mundo</p>
+	<p class="clase1">Adiós Mundo</p>
+	<br>
+	<p class="clase0">Hola mundo</p>
+	<h3>Ciclos formativos</h3>
+	<h3>Diseño de Interfaces Web</h3>
+	<br>
+	<p class="clase1">Hola mundo</p>
+	<h3 class="clase2">Ciclos Formativos</h3>
+	<h3 class="clase2">Diseño de Interfaces Web</h3>
+	<br>
+	<a href="http://www.google.es">Google</a>
+	<a href="http://www.elmundo.es">Noticias</a>
+	<br>
+	<a  href="http://www.google.es" class="clase3">Google</a>
+	<a class="clase3" href="http://www.elmundo.es">Noticias</a>
 
-<H2>Visualización de Elementos</H2>
 
-<dl>
-	<dt>Display: none</dt>
-	<dd>El elemento queda oculto (también sus subelementos)
-		<br>Es muy usado en JavaScript para hacer aparecer/desaparecer elementos
-	</dd>
-	<dt>Display: inline</dt>
- 	<dd>Los elementos se muestran sin romper la línea actual, de manera seguida.
- 		<br>permite colocar elementos de manera consecutiva, sin romper línea
- 		<br>se ignoran los márgenes superior e inferior (margin) pero sí reconoce
- 		<br>los rellenos (padding) y los márgenes superior e inferior, así como los bordes (border)
- 		<br>No hace caso de widht y height.
- 		<br>Por defecto son los elementos a, span, small, strong, em, mark, etc.
- 	</dd>
- 	<dt>Display: block</dt>
- 	<dd>Elementos que se muestran dentro de una caja rectangular.
- 		<br>Rompen la línea actual y, por defecto, no adminte otro elemento a su lado.
- 		<br>p, h1, h2, div, section, nav, figure, etc.
- 	</dd>
- 	<dt>Display: inline-block</dt>
- 	<dd>El elemento forma un bloque rectangular, per es interior a su contenedor (no rompe línea)
- 		<br>Sí admite elementos a su lado. Admite manipular width y heigh
- 		<br>Ejemplos son button, image, input, textarea, select, etc. 
- 	</dd>
- 	<dt>Vamos a ver un ejemplo de todo lo anterior</dt>
- 	<dd>
- 		<p class="clase0">Hola mundo</p>
- 		<p class="clase0">Adiós mundo</p>
- 		<p class="clase1">Hola Mundo</p>
- 		<p class="clase1">Adiós Mundo</p>
- 		<br>
- 		<p class="clase0">Hola mundo</p>
- 		<h3>Ciclos formativos</h3>
- 		<h3>Lenguaje de Marcas</h3>
- 		<br>
- 		<p class="clase1">Hola mundo</p>
- 		<h3 class="clase2">Ciclos Formativos</h3>
- 		<h3 class="clase2">Lenguaje de Marcas</h3>
- 		<br>
- 		<a href="http://www.google.es">Google</a>
- 		<a href="http://www.elmundo.es">Noticias</a>
- 		<br>
- 		<a  href="http://www.google.es" class="clase3">Google</a>
- 		<a class="clase3" href="http://www.elmundo.es">Noticias</a>
- 	</dd>
-</dl>
+	<hr>
+	<p>&copy; CESUR, 2024-2025</p>
+
 </body>
 </html>

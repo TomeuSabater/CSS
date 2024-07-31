@@ -32,12 +32,52 @@
 
 	<dl>
 		<dt>DIV</dt>
-		<dd>La etiqueta DIV define una división; Una agrupación, un conjunto de elementos.  
-			<br>permite agrupar varios elementos. Zonas de página independientes
-			<br>Un navegador no muestra nada con DIV, no tiene efecto por sí mismo.
+		<dd>
+			<p>La etiqueta DIV define una división; Una agrupación, un conjunto de elementos.<br>
+		Permite agrupar varios elementos, por ejemplo, zonas o áreas de página independientes<br>
+		Este tag se usa para estructurar el HMTL y aplicar CSS ya que el navegador no muestra nada con DIV, no tiene efecto por sí mismo.<p>
 		</dd>
+		
 		<dt>Ejemplo con DIV</dt>
 		<dd>
+		
+			<pre>
+		
+&lt;style type="text/css"&gt;
+
+	div.clase0  {
+		background-color: olive;
+		border: dotted 2px;
+		color: white;
+		padding-left:10px;
+		width: 80%;
+		margin: auto
+	}
+	
+	div.clase1 {
+		background-color: black;
+		color: white;
+		width:20%;
+		margin:auto;
+	}
+			
+&lt;/style&gt;
+		
+&lt;div class="clase0"&gt;
+	&lt;p&gt;Esto es un primer párrafo dentro de un Div&lt;/p&gt;
+	&lt;p&gt;Esto es un segundo párrafo dentro del mismo un Div&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="clase0"&gt;
+	&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;
+	&lt;p&gt;Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,&lt;/p&gt; 
+	&lt;p&gt;when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="clase1"&gt;
+	&lt;p&gt;Esto es una caja centrada&lt;/p&gt;
+&lt;/div&gt;	
+		
+			</pre>
+
 			<div class="clase0">
 				<p>Esto es un primer párrafo dentro de un Div</p>
 				<p>Esto es un segundo párrafo dentro del mismo un Div</p>
@@ -47,12 +87,14 @@
 				<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p> 
 				<p>when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 			</div>
-			
 			<div class="clase1">
 				<p>Esto es una caja centrada</p>
 			</div>
 		</dd>
 	</dl>
+	
+	<hr>
+	<p>&copy; CESUR, 2024-2025</p>
 
 </body>
 </html>
