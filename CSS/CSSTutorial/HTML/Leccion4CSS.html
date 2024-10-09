@@ -18,7 +18,17 @@
 
 <body>
 
-	<h1>Orden de Aplicación de los Estilos: CASCADING ORDER</h1>
+	<h1>Orden de Aplicación de los Estilos: Cascading Order</h1>
+	
+	<div>
+	  <p>Existe un orden de aplicación para el CSS si este está definido a diferentes niveles: (de mayor a menor prioridad)</p>
+	  <ol>
+	    <li>CSS a nivel de etiqueta (Inline), es el que más prioridad tiene, reescribe cualquier estilo de nivel superior</li>
+	    <li>CSS a nivel de header (Internal), reescribe cualquier estilo de nivel superior</li>
+	    <li>CSS a nivel de fichero .css externo (External), reescribe cualquier estilo a nivel superior</li>
+	    <li>CSS por defecto que aplica el navegador, es el de menor prioridad, pero el que se aplica si no existe otro</li>
+	  </ol>
+	</div>
 	
 	<div>
 		<p>El CSS se denomina "Cascade" porque se aplica en cascada.<br>
@@ -66,18 +76,10 @@
 		<h4 style="color:#0000ff">Estilo de etiqueta</h4>
 	</div>
 	
-	<div>
-	  <p>Existe un orden de aplicación para el CSS si este está definido a diferentes niveles: (de mayor a menor prioridad)</p>
-	  <ol>
-	    <li>CSS a nivel de etiqueta (Inline), es el que más prioridad tiene, reescribe cualquier estilo de nivel superior</li>
-	    <li>CSS a nivel de header (Internal), reescribe cualquier estilo de nivel superior</li>
-	    <li>CSS a nivel de fichero .css externo (External), reescribe cualquier estilo a nivel superior</li>
-	    <li>CSS por defecto que aplica el navegador, es el de menor prioridad, pero el que se aplica si no existe otro</li>
-	  </ol>
-	</div>
+	<a href="Leccion5CSS.html">Leccion5CSS.html</a>
 
 	<hr>
-	<p>&copy; CESUR, 2024-2025</p>
+	<p>&copy; BSB, 2024-2025</p>
 
 </body>
 </html>
