@@ -56,7 +56,7 @@
 		p.clase2:last-child {background-color: blue;}
 		p.clase2:nth-child(odd) {
 			letter-spacing:15px; 
-			color: yellow;
+			color: green;
 		} 
 						
 	</style>
@@ -163,7 +163,7 @@
 			<dd>Primera línea de texto</dd>
 		<dt>:first-child :last-child</dt>
 			<dd>Hace referencia al primer/último elemento de un tipo contenido dentro de otro.
-				<br>Es necesario que el tipo del primer/último elemento sea el indicado en la hoja de estilo
+				<br>Es necesario que el tipo del primer/último elemento sea el indicado en la hoja de estilo (ver ejemplo)
 				<br>Es decir, debe ser el primer/último hijo para que se aplique la propiedad.
 			</dd>
 		<dt>:nth-child(number)</dt>
@@ -210,14 +210,16 @@
 	&lt;/style&gt;
 	
 	&lt;p&gt;&lt;a href="https://www.google.es"&gt;enlace a Google&lt;/a&gt;&lt;/p&gt;	
-	&lt;br&gt;
+	
 	&lt;p&gt;&lt;a href="https://www.elmundo.es"&gt;enlace a Noticias&lt;/a&gt;
+	
+	&lt;p&gt;&lt;a href="https://www.w3schools.com."&gt;enlace a W3Schools&lt;/a&gt;
 			</pre>		
-			<p><a href="https://www.google.es">enlace a Google</a></p>	
-			<br>
-			<p><a href="https://www.elmundo.es">enlace a Noticias</a>
+				<p><a href="https://www.google.es">enlace a Google</a></p>	
 				
+				<p><a href="https://www.elmundo.es">enlace a Noticias</a></p>	
 				
+				<p><a href="https://www.w3schools.com/">enlace a W3Schools</a>
 			<pre>
 	&lt;style type="text/css"&gt;	
 		p.clase1:first-letter {
@@ -256,7 +258,7 @@
 			p.clase2:last-child {background-color: blue;}
 			p.clase2:nth-child(odd) {
 				letter-spacing:15px; 
-				color: yellow;
+				color: green;
 			} 
 				
 	&lt;/h2&gt;
