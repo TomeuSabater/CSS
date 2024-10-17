@@ -65,7 +65,6 @@
 	 	<dd>
 	 		<p>Los elementos se muestran sin romper la línea actual, de manera seguida o continuada<br>
 	 		permite colocar elementos de manera consecutiva, sin romper línea<br>
-	 		se ignoran los márgenes superior e inferior (margin) pero sí reconoce los rellenos (padding) y los márgenes superior e inferior, así como los bordes (border)<br>
 	 		No hace caso de widht y height, pero el elemento afectado toma tanto widht como necesite.<br>
 	 		Se aplica por defecto a los elementos: a, span, small, strong, em, mark, etc.</p>
 	 	</dd>
@@ -100,7 +99,7 @@
 	}
 	
 	p.clase1 {
-		display:inline; /* No admite ancho ni alto, agrega salto al final */
+		display:inline; /* No admite ancho ni alto, no agrega salto al final */
 		background-color: red; /* El color de fondo sólo ocupa el espacio del texto */
 		color:white;
 	} 
@@ -123,18 +122,18 @@
 
 	&lt;/style&gt;
 		 	
-	&lt;p class="clase0"&gt;Hola mundo&lt;/p&gt;
-	&lt;p class="clase0"&gt;Adiós mundo&lt;/p&gt;
-	&lt;p class="clase1"&gt;Hola Mundo&lt;/p&gt;
-	&lt;p class="clase1"&gt;Adiós Mundo&lt;/p&gt;
+	&lt;p class="clase0"&gt;Hola mundo 1&lt;/p&gt;
+	&lt;p class="clase0"&gt;Adiós mundo 2&lt;/p&gt;
+	&lt;p class="clase1"&gt;Hola Mundo 3&lt;/p&gt;
+	&lt;p class="clase1"&gt;Adiós Mundo 4&lt;/p&gt;
 	&lt;br&gt;
-	&lt;p class="clase0"&gt;Hola mundo&lt;/p&gt;
-	&lt;h3&gt;Ciclos formativos&lt;/h3&gt;
-	&lt;h3&gt;Diseño de Interfaces Web&lt;/h3&gt;
+	&lt;p class="clase0"&gt;Hola mundo5&lt;/p&gt;
+	&lt;h3&gt;Ciclos formativos 6&lt;/h3&gt;
+	&lt;h3&gt;Diseño de Interfaces Web7 &lt;/h3&gt;
 	&lt;br&gt;
-	&lt;p class="clase1"&gt;Hola mundo&lt;/p&gt;
-	&lt;h3 class="clase2"&gt;Ciclos Formativos&lt;/h3&gt;
-	&lt;h3 class="clase2"&gt;Diseño de Interfaces Web&lt;/h3&gt;
+	&lt;p class="clase1"&gt;Hola mundo8 &lt;/p&gt;
+	&lt;h3 class="clase2"&gt;Ciclos Formativos 9&lt;/h3&gt;
+	&lt;h3 class="clase2"&gt;Diseño de Interfaces Web 10&lt;/h3&gt;
 	&lt;br&gt;
 	&lt;a href="http://www.google.es"&gt;Google&lt;/a&gt;
 	&lt;a href="http://www.elmundo.es"&gt;Noticias&lt;/a&gt;
@@ -144,25 +143,20 @@
 	 	
  	</pre>
 
-	<p class="clase0">Hola mundo</p>
-	<p class="clase0">Adiós mundo</p>
-	<p class="clase1">Hola Mundo</p>
-	<p class="clase1">Adiós Mundo</p>
+	<p class="clase0">Hola mundo 1</p>
+	<p class="clase0">Adiós mundo 2</p>
+	<p class="clase1">Hola Mundo 3</p>
+	<p class="clase1">Adiós Mundo 4</p>
 	<br>
-	<p class="clase0">Hola mundo</p>
-	<h3>Ciclos formativos</h3>
-	<h3>Diseño de Interfaces Web</h3>
+	<p class="clase0">Hola mundo 5</p>
+	<h3>Ciclos formativos 6</h3>
+	<h3>Diseño de Interfaces Web 7</h3>
 	<br>
-	<p class="clase1">Hola mundo</p>
-	<h3 class="clase2">Ciclos Formativos</h3>
-	<h3 class="clase2">Diseño de Interfaces Web</h3>
-	<br>
-	<a href="http://www.google.es">Google</a>
-	<a href="http://www.elmundo.es">Noticias</a>
-	<br>
-	<a  href="http://www.google.es" class="clase3">Google</a>
-	<a class="clase3" href="http://www.elmundo.es">Noticias</a>
+	<p class="clase1">Hola mundo 8</p>
+	<h3 class="clase2">Ciclos Formativos 9</h3>
+	<h3 class="clase2">Diseño de Interfaces Web 10</h3>
 
+	<br>
 
 	<a href="Leccion13CSS.html">Leccion13CSS.html</a>
 	
