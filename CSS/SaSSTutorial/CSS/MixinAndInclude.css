@@ -1,11 +1,11 @@
 /* Define general variables and values for website */
 /* In case you need change any value, then you apply the change in this file only */
 /* No file extension is required */
-/* mixin is like a function */
+/* a mixin is like a function */
 /* Define mixin with two arguments */
 /* One of the arguments has a default value */
 body {
-  background-color: grey;
+  background-color: #d3d3d3;
   font-family: Helvetica, sans-serif;
   font-size: 18px;
   color: black;

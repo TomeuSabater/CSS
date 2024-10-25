@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../SCSS/ImportPartials.scss","../SCSS/_VariablesImport.scss"],"names":[],"mappings":"AACA;ACCA;AACA;ADA2B;AAE3B;EACI,kBCCQ;EDAR,aCFK;EDGL;EACA,OCHM","file":"ImportPartials.css"}
+{"version":3,"sourceRoot":"","sources":["../SCSS/ImportPartials.scss","../SCSS/_VariablesImport.scss"],"names":[],"mappings":"AACA;ACAA;AACA;ADC2B;AAE3B;EACI;EACA,aCHK;EDIL,WCDS;EDET,OCJM","file":"ImportPartials.css"}

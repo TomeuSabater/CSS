@@ -1,6 +1,6 @@
-/* Define standard variables and values for website */
+/* Sass Nested Rules and Properties */
 body {
-  background-color: grey;
+  background-color: #d3d3d3;
   font-family: Helvetica, sans-serif;
   font-size: 18px;
   color: black;
@@ -20,7 +20,7 @@ nav a {
   text-decoration: none;
 }
 
-p {
+p.example {
   font-family: Ink Journal, Ink Free; /* Aplies the family in sequence */
   font-size: 18px;
   font-weight: bold;

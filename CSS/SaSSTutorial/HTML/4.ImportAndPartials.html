@@ -45,34 +45,34 @@
 
     <dt>Examples</dt>
     <dd>
-      this is the "VariablesImport.scss" file content
+      this is the "VariablesImport.scss" file content (the file to be imported)
       <pre>
-          $myFont: Helvetica, sans-serif;
-          $myColor: darkblue;
-          $mybgcolor: lightblue;
-          $myFontSize: 18px;
-          $myWidth: 680px;
-          $myBorder: 1px red double;
-        </pre>
-      this is the "ImportPartials.scss" file content
+		$myFont: Helvetica, sans-serif;
+		$myColor: black;
+		$mybgcolor: #d3d3d3;
+		$myFontSize: 18px;
+		$myWidth: 680px;
+		$myBorder: 2px red double;
+      </pre>
+      this is the "ImportPartials.scss" file content (the main scss file)
       <pre>
-        @import "VariablesImport"; /* No file extension is required */
+       @import "VariablesImport"; /* No file extension is required */
 
-        body {
-          background-color: $mybgcolor;
-          font-family: $myFont;
-          font-size: $myFontSize;
-          color: $myColor;
-        }
+       body {
+         background-color: $mybgcolor;
+         font-family: $myFont;
+         font-size: $myFontSize;
+         color: $myColor;
+       }
       </pre>
       And finally, this is the "ImportPartials.css" file content
       <pre>
-        body {
-          background-color: grey;
-          font-family: Helvetica, sans-serif;
-          font-size: 18px;
-          color: black;
-        }
+	body {
+	  background-color: #d3d3d3;
+	  font-family: Helvetica, sans-serif;
+	  font-size: 18px;
+	  color: black;
+	}
       </pre>
     </dd>
     <dt>Sass Partials</dt>
@@ -87,5 +87,13 @@
       Then, we can rename the file to <i>"_VariablesImport.scss"</i>, and the file will not be transpilde "directly"<br>
       Note that the import clausule in <i>ImportPartials.scss</i> file remains the same, no "_" is added</dd>
   </dl>
+  
+     <a href="5.MixinAndInclude.html">5. Mixin &amp; Include</a>
+	
+    <hr>
+	<p>&copy; BSB, 2024-2025</p> 
+  
+  
+  
 
 </body>

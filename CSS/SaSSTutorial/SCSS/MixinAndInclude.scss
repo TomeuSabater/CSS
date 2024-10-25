@@ -1,7 +1,9 @@
 
+////// @Mixin and @Include /////
+
 @import "VariablesImport"; /* No file extension is required */
 
-/* mixin is like a function */ 
+/* a mixin is like a function */ 
 @mixin important-text { 
     color: red;
     font-size: 25px;
