@@ -36,6 +36,10 @@
 			margin: 2px;
 			color:white;
 		}
+		
+		.negrita {
+			font-weight:bold; 
+		}
 	
 	</style>
 
@@ -63,7 +67,7 @@
 		
 		<dt>Display: inline</dt>
 	 	<dd>
-	 		<p>Los elementos se muestran sin romper la línea actual, de manera seguida o continuada<br>
+	 		<p>Los elementos se muestran <span class="negrita">sin romper la línea actual</span>, de manera seguida o continuada<br>
 	 		permite colocar elementos de manera consecutiva, sin romper línea<br>
 	 		No hace caso de widht y height, pero el elemento afectado toma tanto widht como necesite.<br>
 	 		Se aplica por defecto a los elementos: a, span, small, strong, em, mark, etc.</p>
@@ -72,14 +76,14 @@
 	 	<dt>Display: block</dt>
 	 	<dd>
 	 		<p>Los elementos que se muestran dentro de una caja rectangular.<br>
-	 		Rompen la línea actual y, por defecto, no adminte otro elemento a su lado, toma todo el width disponible<br>
+	 		<span class="negrita">Rompen la línea actual</span> y, por defecto, no adminte otro elemento a su lado, toma todo el width disponible<br>
 	 		Se aplica por defecto a los elementos: p, h1, h2, div, section, nav, figure, etc.</p>
 	 	</dd>
 	 	
 	 	<dt>Display: inline-block</dt>
 	 	<dd>
 	 		<p>El elemento forma un bloque rectangular, per es interior a su contenedor (no rompe línea)<br>
-	 		Sí admite elementos a su lado. Admite manipular width y heigh<br>
+	 		<span class="negrita">Sí admite elementos a su lado</span>. Admite manipular width y heigh<br>
 	 		Ejemplos son button, image, input, textarea, select, etc.</p>
 	 	</dd>
 	 		 	
@@ -120,41 +124,35 @@
 		color:white;
 	}
 
-	&lt;/style&gt;
-		 	
-	&lt;p class="clase0"&gt;Hola mundo 1&lt;/p&gt;
-	&lt;p class="clase0"&gt;Adiós mundo 2&lt;/p&gt;
-	&lt;p class="clase1"&gt;Hola Mundo 3&lt;/p&gt;
-	&lt;p class="clase1"&gt;Adiós Mundo 4&lt;/p&gt;
+	&lt;/style&gt;	
+
+	&lt;p class="clase0"&gt;Hola mundo 1, visualización estándard&lt;/p&gt;
+	&lt;p class="clase0"&gt;Adiós mundo 2, visualización estándard&lt;/p&gt;
+	&lt;p class="clase1"&gt;Hola Mundo 3, display:inline&lt;/p&gt;
+	&lt;p class="clase1"&gt;Adiós Mundo 4, display:inline&lt;/p&gt;
 	&lt;br&gt;
-	&lt;p class="clase0"&gt;Hola mundo5&lt;/p&gt;
-	&lt;h3&gt;Ciclos formativos 6&lt;/h3&gt;
-	&lt;h3&gt;Diseño de Interfaces Web7 &lt;/h3&gt;
+	&lt;p class="clase0"&gt;Hola mundo 5, visualización estándard&lt;/p&gt;
+	&lt;h3&gt;Ciclos formativos 6, visualización estándard&lt;/h3&gt;
+	&lt;h3&gt;Diseño de Interfaces Web 7, visualización estándard&lt;/h3&gt;
 	&lt;br&gt;
-	&lt;p class="clase1"&gt;Hola mundo8 &lt;/p&gt;
-	&lt;h3 class="clase2"&gt;Ciclos Formativos 9&lt;/h3&gt;
-	&lt;h3 class="clase2"&gt;Diseño de Interfaces Web 10&lt;/h3&gt;
-	&lt;br&gt;
-	&lt;a href="http://www.google.es"&gt;Google&lt;/a&gt;
-	&lt;a href="http://www.elmundo.es"&gt;Noticias&lt;/a&gt;
-	&lt;br&gt;
-	&lt;a  href="http://www.google.es" class="clase3"&gt;Google&lt;/a&gt;
-	&lt;a class="clase3" href="http://www.elmundo.es"&gt;Noticias&lt;/a&gt;
-	 	
+	&lt;p class="clase1"&gt;Hola mundo 8, display:inline&lt;/p&gt;
+	&lt;h3 class="clase2"&gt;Ciclos Formativos 9, inline-block&lt;/h3&gt;
+	&lt;h3 class="clase2"&gt;Diseño de Interfaces Web 10, inline-block&lt;/h3&gt;
+
  	</pre>
 
-	<p class="clase0">Hola mundo 1</p>
-	<p class="clase0">Adiós mundo 2</p>
-	<p class="clase1">Hola Mundo 3</p>
-	<p class="clase1">Adiós Mundo 4</p>
+	<p class="clase0">Hola mundo 1, visualización estándard</p>
+	<p class="clase0">Adiós mundo 2, visualización estándard</p>
+	<p class="clase1">Hola Mundo 3, display:inline</p>
+	<p class="clase1">Adiós Mundo 4, display:inline</p>
 	<br>
-	<p class="clase0">Hola mundo 5</p>
-	<h3>Ciclos formativos 6</h3>
-	<h3>Diseño de Interfaces Web 7</h3>
+	<p class="clase0">Hola mundo 5, visualización estándard</p>
+	<h3>Ciclos formativos 6, visualización estándard</h3>
+	<h3>Diseño de Interfaces Web 7, visualización estándard</h3>
 	<br>
-	<p class="clase1">Hola mundo 8</p>
-	<h3 class="clase2">Ciclos Formativos 9</h3>
-	<h3 class="clase2">Diseño de Interfaces Web 10</h3>
+	<p class="clase1">Hola mundo 8, display:inline</p>
+	<h3 class="clase2">Ciclos Formativos 9, inline-block</h3>
+	<h3 class="clase2">Diseño de Interfaces Web 10, inline-block</h3>
 
 	<br>
 
