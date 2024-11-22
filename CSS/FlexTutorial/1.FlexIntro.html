@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<title>Flex Intro</title>
+
+	<style>
+	.flex-container {
+	  display: flex;
+	  background-color: DodgerBlue;
+	}
+	
+	.flex-container > div {
+	  background-color: #f1f1f1;
+	  margin: 10px;
+	  padding: 20px;
+	  font-size: 30px;
+	}
+	</style>
+
+</head>
+
+<body>
+
+<h1>Create a Flex Container</h1>
+
+<pre>
+&lt;style&gt;
+	.flex-container {
+		  display: flex;
+		  background-color: DodgerBlue;
+	}
+
+	.flex-container &gt; div {
+		  background-color: #f1f1f1;
+		  margin: 10px;
+		  padding: 20px;
+		  font-size: 30px;
+	}
+&lt;/style&gt;
+
+&lt;div class="flex-container"&gt;
+  &lt;div&gt;Div 1&lt;/div&gt;
+  &lt;div&gt;Div 2&lt;/div&gt;
+  &lt;div&gt;Div 3&lt;/div&gt;  
+&lt;/div&gt;
+</pre>
+
+	<p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.<br>
+	Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+
+	<div class="flex-container">
+	  <div>Div 1</div>
+	  <div>Div 2</div>
+	  <div>Div 3</div>  
+	</div>
+
+	<p>
+    	<a href="2.FlexProperties.html">2 - Flex Container Properties</a>
+	</p>
+    <hr>
+	<p>&copy; BSB, 2024-2025</p> 
+
+</body>
+</html>
