@@ -37,7 +37,7 @@
 		<p>En el siguiente ejemplo tenemos definido los siguiente:</p>
 		<ul>
 			<li>&lt;h1&gt;Estilo de Navegador&lt;/h1&gt; sin ningún css definido sobre este tag</li>
-			<li>Un fichero .css con el siguiente contenido:
+			<li>Un fichero .css con el siguiente contenido (External):
 				<pre>
 				  &lt;link rel="StyleSheet" href="../CSS/Leccion4CSS.css" type="text/css"&gt;
 				  @charset "UTF-8";
@@ -48,7 +48,7 @@
 					h4 {color:#ff0000}
 				</pre>
 			</li> 
-			<li>Una cabezera con el siguiente contenido
+			<li>Una cabezera con el siguiente contenido (Internal):
 				<pre>
 					&lt;style type="text/css"&gt;
 		   			h3 {color:#00ff00}
@@ -56,7 +56,7 @@
 					&lt;/style&gt;
 				</pre>
 			</li>
-				<li>Finalmente, un tag definido de la siguiente manera:<br>
+				<li>Finalmente, un tag definido de la siguiente manera (Inline):<br>
 				<pre>
 					  &lt;h4 style="color:#0000ff"&gt;Estilo de etiqueta&lt;/h4&gt;
 				</pre>		
@@ -76,10 +76,18 @@
 		<h4 style="color:#0000ff">Estilo de etiqueta</h4>
 	</div>
 	
+	<p>Al poner definir prioridades, podemos hacer los siguiente:</p>
+	<ul>
+		<li>Generar un fichero .css en modo External para dar formato y estilo a toda la web de manera general.</li>
+		<li>Utilizar el css en modo Internal para dar formato a las páginas consideradas especiales porque no siguen el formato y estilo general.</li>
+		<li>Utilizar el css en modo Inline para dar formato a los tags o elementos específicos de una página que necesitan de un formato y estilo puntual.</li> 
+	</ul>
+	
+	
 	<a href="Leccion5CSS.html">Leccion5CSS.html</a>
 
 	<hr>
-	<p>&copy; BSB, 2024-2025</p>
+		<p>&copy; BSB, 2025-2026</p>
 
 </body>
 </html>
