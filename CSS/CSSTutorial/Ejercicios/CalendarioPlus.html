@@ -4,91 +4,44 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Calendario</title>
+	<title>Calendario Plus</title>
 
-	<style type="text/css">
+	<link rel="StyleSheet" href="../CSS/Calendario.css" type="text/css">
+	<script src="../SCRIPT/jquery-3.7.1.js"></script>
+    
+    <script>
 
-		body{background-color:lightgrey}
+			$(function(){
 
-		table.clase7{
-			background-color:white;
-			border:1px solid black;
-			width:50%;
-			padding:15px
-		}
-		table.clase4{
-			margin-left:auto;
-			margin-right:auto
-		}
-		th.clase3{
-			background-color:pink;
-			border-top:2px solid black;
-			border-bottom:2px solid black;
-			font-size:25px
-		}
-		th.clase6:nth-child(even){
-			background-color:pink;
-			border-right:1px solid black;
-			border-bottom:1px solid black;
-			width:38px;
-			height:38px
-		}
-		td{text-align:center}
-		td.clase5{width:38px}
-		td.clase1:nth-child(even){
-			background-color:pink;
-			border-right:1px solid black;
-			border-bottom:1px solid black;
-			width:38px;
-			height:38px
-		}
-		td.clase2:nth-child(odd){
-			background-color:pink;
-			border-right:1px solid black;
-			border-bottom:1px solid black;
-			width:38px;
-			height:38px
-		}
-		table.clase8{
-			margin-left:auto;
-			margin-right:auto
-		}
-		th.clase9{
-			letter-spacing:8px;
-			font-size:25px;
-			background-color:lightgrey;
-			color:white
-		}
-		th.clase10{
-			width:58px;
-			height:32px;
-			text-align:center
-		}
-		td.clase11{
-			background-color:lightgrey;
-			text-align:center;
-			width:58px;
-			height:32px;
-			margin-left:5px;
-			margin-right:5px
-		}
-		td.clase12{
-			width:58px;
-			height:32px
-		}
+				$("button").click(function(){
+					$("#2023_1").css("fontSize", "medium")
 
-	</style>
+				});
+
+				$("td").mouseenter(function(){
+        				$(this).css("fontSize", "larger")
+   				});
+
+    			$("td").mouseleave(function(){
+        			$(this).css("fontSize", "medium")
+    			});
+				
+            });
+
+    </script>
+
+
 </head>
 
 <body>
+
 	<table class="clase7">
 		<tr>
 			<td>
 				<table class="clase4">
 					<tr>
 						<th class="clase3" colspan="9">
-							Diciembre 2021
+							Diciembre 2023
 						</th>
 					</tr>
 					<tr>
@@ -128,22 +81,28 @@
 							
 						</td>
 						<td class="clase1">
+							
+						</td>
+						<td class="clase1">
+							
+						</td>
+						<td id="2023_1" class="clase1" style="font-size:xx-small">
 							1
 						</td>
 						<td class="clase1">
 							2
 						</td>
-						<td class="clase1">
-							3
-						</td>
-						<td class="clase1">
-							4
-						</td>
 						<td class="clase1"> 
-							5
+							3
 						</td>
 					</tr>
 					<tr>
+						<td class="clase2">
+							4
+						</td>
+						<td class="clase2">
+							5
+						</td>
 						<td class="clase2">
 							6
 						</td>
@@ -159,14 +118,14 @@
 						<td class="clase2">
 							10
 						</td>
-						<td class="clase2">
-							11
-						</td>
-						<td class="clase2">
-							12
-						</td>
 					</tr>
 					<tr>
+						<td class="clase1">
+							11
+						</td>
+						<td class="clase1">
+							12
+						</td>
 						<td class="clase1">
 							13
 						</td>
@@ -182,14 +141,14 @@
 						<td class="clase1">
 							17
 						</td>
-						<td class="clase1">
-							18
-						</td>
-						<td class="clase1">
-							19
-						</td>
 					</tr>
 					<tr>
+						<td class="clase2">
+							18
+						</td>
+						<td class="clase2">
+							19
+						</td>
 						<td class="clase2">
 							20
 						</td>
@@ -205,14 +164,14 @@
 						<td class="clase2">
 							24
 						</td>
-						<td class="clase2">
-							25
-						</td>
-						<td class="clase2">
-							26
-						</td>
 					</tr>
 					<tr>
+						<td class="clase1">
+							25
+						</td>
+						<td class="clase1">
+							26
+						</td>
 						<td class="clase1">
 							27
 						</td>
@@ -227,12 +186,6 @@
 						</td>
 						<td class="clase1">
 							31
-						</td>
-						<td class="clase1">
-							
-						</td>
-						<td class="clase1">
-							
 						</td>
 					</tr>
 				</table>
@@ -248,7 +201,7 @@
 				<table class="clase8">
 					<tr>
 						<th class="clase9" colspan="7">
-							ENERO 2022
+							ENERO 2024
 						</th>
 					</tr>
 					<tr>
@@ -275,113 +228,108 @@
 						</th>
 					</tr>
 					<tr>
-						<td class="clase11" colspan="5">
-							
-						</td>
 						<td class="clase11">
 							1
 						</td>
 						<td class="clase11">
 							2
 						</td>
-					</tr>
-					<tr>
-						<td class="clase12">
+						<td class="clase11">
 							3
 						</td>
-						<td class="clase12">
+						<td class="clase11">
 							4
 						</td>
-						<td class="clase12">
+						<td class="clase11">
 							5
 						</td>
-						<td class="clase12">
+						<td class="clase11">
 							6
 						</td>
-						<td class="clase12">
+						<td class="clase11">
 							7
 						</td>
+					</tr>
+					<tr>
 						<td class="clase12">
 							8
 						</td>
 						<td class="clase12">
 							9
 						</td>
-					</tr>
-					<tr>
-						<td class="clase11">
+						<td class="clase12">
 							10
 						</td>
-						<td class="clase11">
+						<td class="clase12">
 							11
 						</td>
-						<td class="clase11">
+						<td class="clase12">
 							12
 						</td>
-						<td class="clase11">
+						<td class="clase12">
 							13
 						</td>
-						<td class="clase11">
+						<td class="clase12">
 							14
 						</td>
+					</tr>
+					<tr>
 						<td class="clase11">
 							15
 						</td>
 						<td class="clase11">
 							16
 						</td>
-					</tr>
-					<tr>
-						<td class="clase12">
+						<td class="clase11">
 							17
 						</td>
-						<td class="clase12">
+						<td class="clase11">
 							18
 						</td>
-						<td class="clase12">
+						<td class="clase11">
 							19
 						</td>
-						<td class="clase12">
+						<td class="clase11">
 							20
 						</td>
-						<td class="clase12">
+						<td class="clase11">
 							21
 						</td>
+					</tr>
+					<tr>
 						<td class="clase12">
 							22
 						</td>
 						<td class="clase12">
 							23
 						</td>
-					</tr>
-					<tr>
-						<td class="clase11">
+						<td class="clase12">
 							24
 						</td>
-						<td class="clase11">
+						<td class="clase12">
 							25
 						</td>
-						<td class="clase11">
+						<td class="clase12">
 							26
 						</td>
-						<td class="clase11">
+						<td class="clase12">
 							27
 						</td>
-						<td class="clase11">
+						<td class="clase12">
 							28
 						</td>
+					</tr>
+					<tr>
 						<td class="clase11">
 							29
 						</td>
 						<td class="clase11">
 							30
 						</td>
-					</tr>
-					<tr>
-						<td class="clase12">
+						<td class="clase11">
 							31
 						</td>
-						<td class="clase12" colspan="6">
+						<td class="clase11" colspan="4">
 							
 						</td>
 					</tr>
@@ -392,7 +340,7 @@
 	</table>
 
 	<hr>
-	<p>&copy; BSB, 2024-2025</p>
+	<p>&copy; BSabater, 2024-2025</p>
 
 </body>
 </html>
