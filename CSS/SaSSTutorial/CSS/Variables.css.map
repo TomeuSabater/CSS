@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/Variables.scss"],"names":[],"mappings":"AACA;AASA;EACI,kBANM;EAON,aATK;EAUL,WAPS;EAQT,OAVM;;;AAaV;EACI,OAXM;EAYN,QAXO","file":"Variables.css"}
+{"version":3,"sourceRoot":"","sources":["../SCSS/Variables.scss"],"names":[],"mappings":"AACA;AASA;EACI,kBANM;EAON,aATK;EAUL,WAPS;EAQT,OAVM;;;AAaV;EACI,OAXM;EAYN,QAXO","file":"variables.css"}

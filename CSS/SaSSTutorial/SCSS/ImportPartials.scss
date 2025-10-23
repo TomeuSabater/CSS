@@ -1,7 +1,7 @@
 
 /* Import & Partials - DRY Don't Repeat Yourself */
 
-@import "VariablesImport"; /* No file extension is required */
+@import "VariablesImport"; // No file extension is required 
 
 body {
     background-color: $mybgcolor;

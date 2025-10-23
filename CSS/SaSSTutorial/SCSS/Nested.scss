@@ -1,31 +1,33 @@
+
+/* Ejemplo de código CSS anidado */
+
 nav {
-    ul {
+    ul { // nav ul
       margin: 0;
       padding: 0;
       list-style: none;
     }
-    li {
+    li { // nav li
       display: inline-block;
     }
-    a {
+    a { // nav a 
       display: block;
       padding: 6px 12px;
       text-decoration: none;
     }
 }
 
+
 p {
 
-  font: {
+  font: { // p font-family font-size font-weight
     family: Helvetica, sans-serif;
     size: 18px;
     weight: bold;
   }
-
-  text: {
+  text: { // p text-align text-transform text-overflow 
     align: center;
     transform: lowercase;
     overflow: hidden;
   }
-
 }

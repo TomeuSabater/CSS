@@ -21,7 +21,7 @@ nav a {
 }
 
 p.example {
-  font-family: Ink Journal, Ink Free; /* Aplies the family in sequence */
+  font-family: Ink Journal, Ink Free;
   font-size: 18px;
   font-weight: bold;
   text-align: left;
