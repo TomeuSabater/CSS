@@ -109,7 +109,14 @@
   			background-color: #555;
   			color: white;
 		}
-
+		
+		/*Change the link color on active (push mouse button) */
+		li a.navbar3:active {
+			background-color: #f00;
+			color: white;
+		}
+		
+		
 	</style>
 
 </head>
@@ -393,18 +400,18 @@ li a.navbar2 {
 	text-decoration: none;
 }
 
+/* Change the link color on hover */
+li a.navbar2:hover {
+	background-color: #555;
+	color: white;
+}
+
 li a.active {
 	display: block;
 	background-color: #04AA6D;
 	color: white;
 	padding: 8px 16px;
 	text-decoration: none;
-}
-
-/* Change the link color on hover */
-li a.navbar2:hover {
-	background-color: #555;
-	color: white;
 }
 	
 &lt;ul class="navbar2"&gt;
@@ -464,6 +471,12 @@ li a.active3 {
 /* Change the link color on hover */
 li a.navbar3:hover {
 	background-color: #555;
+	color: white;
+}
+
+/* Change the link color on active */
+li a.navbar3:active {
+	background-color: #f00;
 	color: white;
 }
 	
