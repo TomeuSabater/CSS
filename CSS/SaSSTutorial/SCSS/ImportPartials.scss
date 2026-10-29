@@ -3,6 +3,8 @@
 
 @import "VariablesImport"; // No file extension is required 
 
+// @use "VariablesImport" as *; // Version 1.107
+
 body {
     background-color: $myBgColor;
     font-family: $myFont;
