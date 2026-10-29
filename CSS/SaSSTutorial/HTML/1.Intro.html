@@ -29,16 +29,16 @@
       <dt>Why Use Sass?</dt>
         <dd>Stylesheets are getting larger, more complex, and harder to maintain.<br>
           This is where a CSS pre-processor can help.<br>
-          Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions, 
-          and other stuff.
+          Sass lets you use features that do not exist in CSS, like <span style="font-weight:bold">variables, nested rules, mixins, imports, inheritance, built-in functions, 
+          and other stuff.</span>
         </dd>
 
       <dt>Example:</dt> 
-        <dd>We have a website with main color: #a2b9bc<br>
+        <dd>We have a website with main color: #a2b9bc (this color)<br>
           Instead of typing the above value a lot of times, you can use Sass and write this:<br>
           <code>$primary_1: #a2b9bc;<br>
-          .main-header {<br>
-            background-color: $primary_1;<br>
+          		.main-header {<br>
+            	background-color: $primary_1;<br>
           }</code><br>
           So, when using Sass, and the primary color changes, you only need to change it in one place.
         <dd>
@@ -54,8 +54,9 @@
         <dd>
 	        <ul>
 	        	<li>Html files has the ".html" extension</li>
-	        	<li>Sass files has the ".scss" file extension.</li>
 	        	<li>Css files has the ".css" file extension.</li>
+	        	<li>Sass files has the ".scss" file extension.</li>
+
 	        </ul>
         </dd>
 
@@ -76,7 +77,7 @@
 
       <dt>Official Sass Web Site</dt>
         <dd>
-          Read more about Sass at the official Sass web site: <a href="https://sass-lang.com/">https://sass-lang.com/</a>
+          Read more about Sass at the official Sass web site: <a href="https://sass-lang.com/" target="_blank">https://sass-lang.com/</a>
         </dd>
 
       <dt>Install Sass</dt>
@@ -84,17 +85,18 @@
           There are several ways to install Sass in your system.<br> 
           There are many applications that will get you up and running with Sass in a few minutes for Mac, Windows, and Linux.<br>
           Some of these are free, but some are paid apps.<br>
-          You can read more about them here:<a href="https://sass-lang.com/install/">sass-lang.com/install</a>
+          You can read more about them here:<a href="https://sass-lang.com/install/" target="_blank">sass-lang.com/install</a>
           <ol>
-            <li>Download the dart-sass-1.69.5-windows-x64.zip (January 2024) from <a href="https://github.com/sass/dart-sass/releases/tag/1.69.5">https://github.com/sass/dart-sass/releases/tag/1.69.5</a></li>
+            <li>Download the dart-sass-1.69.5-windows-x64.zip (January 2024) from <a href="https://github.com/sass/dart-sass/releases/tag/1.69.5" target="_blank">https://github.com/sass/dart-sass/releases/tag/1.69.5</a></li>
             <li>Unzip the content and move the full content to some folder: C:\Program Files\dart-sass-1.69.5-windows-x64\dart-sass</li>
             <li>Add the path of the folder to the PATH system variables</li>
             <li>Open a CMD and type the next command line <code>sass --version</code> the response should be <code>1.69.5</code></li>
             <li>Try it with the next command: <code>sass {yourpath for .scss files}\index.scss {your path for .css files}\index.css</code><br>
+            example: <code>sass .\SCSS\index.scss .\CSS\index.css</code><br>
               where the index.scss is the next file<br>
-              <code>$primary_1: #a2b9bc;<br>
+              <code>$primary_1: #a2b9bc; //variable definition<br>
                 .main-header {<br>
-                  background-color: $primary_1;<br>
+                  background-color: $primary_1; //using the variable<br>
                 }
               </code><br>
               then the resulting file is index.css and must contain the next code:<br>
@@ -112,7 +114,7 @@
     <a href="2.Variables.html">2 - Variables</a>
 	
     <hr>
-	<p>&copy; BSabater, 2025-26</p> 
+	<p>&copy; BSabater, 2025-27</p> 
    
 </body>
 </html>

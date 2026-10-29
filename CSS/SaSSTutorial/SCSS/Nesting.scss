@@ -3,19 +3,19 @@
 
 $myFont: Helvetica, sans-serif;
 $myColor: black;
-$mybgcolor: #d3d3d3;
+$myBgColor: #d3d3d3;
 $myFontSize: 18px;
 $myWidth: 680px;
 $myBorder: 1px red double;
 
 body {
-    background-color: $mybgcolor;
+    background-color: $myBgColor;
     font-family: $myFont;
     font-size: $myFontSize;
     color: $myColor;
 }
 
-nav {
+nav { // Nested css 
 	    ul {
 	      margin: 0;
 	      padding: 0;
@@ -31,7 +31,7 @@ nav {
 	    }
   }
 
-	  p.example {
+p.example {
 	
 	    font: {
 	      family: Ink Journal, Ink Free; // Aplies the family in sequence 

@@ -3,13 +3,13 @@
 
 $myFont: Helvetica, sans-serif;
 $myColor: darkblue;
-$bgcolor: lightblue;
+$myBgColor: lightblue;
 $myFontSize: 18px;
 $myWidth: 680px;
 $myBorder: 1px red double;
 
 body {
-    background-color: $bgcolor;
+    background-color: $myBgColor;
     font-family: $myFont;
     font-size: $myFontSize;
     color: $myColor;

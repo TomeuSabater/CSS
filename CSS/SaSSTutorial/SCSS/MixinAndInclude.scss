@@ -37,3 +37,4 @@ body {
 .myNotes {
     @include bordered(red); // Call mixin with one value only, the mixin has default value
 }  
+
